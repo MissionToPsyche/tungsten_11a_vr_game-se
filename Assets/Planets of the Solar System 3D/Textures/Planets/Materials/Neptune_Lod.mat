@@ -7,11 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Spaceship Blend/Materials/_Sci Fi 50 Decal Pack_042.002.mat
-  m_Name: _Sci Fi 50 Decal Pack_042.002
-========
-  m_Name: Neptune_2k
->>>>>>>> 0b5952e (Neptune Scene):Assets/Planets of the Solar System 3D/Textures/Planets/Materials/Neptune_2k.mat
+  m_Name: Neptune_Lod
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,11 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<<< HEAD:Assets/Spaceship Blend/Materials/_Sci Fi 50 Decal Pack_042.002.mat
-        m_Texture: {fileID: 0}
-========
-        m_Texture: {fileID: 2800000, guid: 7fa5ce735aa1b4408a20b98a30f0dad4, type: 3}
->>>>>>>> 0b5952e (Neptune Scene):Assets/Planets of the Solar System 3D/Textures/Planets/Materials/Neptune_2k.mat
+        m_Texture: {fileID: 2800000, guid: 9da00a53a276d4b90a364b29d8b0f57f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
