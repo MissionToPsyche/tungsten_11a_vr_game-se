@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Controller.Input {
@@ -16,7 +15,7 @@ namespace Controller.Input {
 		
 		public static Vector3 GetLookPosition() {
 			//Todo: Support controllers and VR look, but for now just use mouse
-			return _instance._mouseInput.GetPosition();
+			return new Vector3(-_instance._mouseInput.GetPosition().y, _instance._mouseInput.GetPosition().x, 0);
 		}
 		
 		public static MouseInput GetMouseInput() {
@@ -26,7 +25,9 @@ namespace Controller.Input {
 	
 	public struct MouseInput {
 		public Vector3 GetPosition() {
-			return UnityEngine.Input.mousePosition;
+			float horizontalInput = UnityEngine.Input.GetAxis("Mouse X");
+			float verticalInput = UnityEngine.Input.GetAxis("Mouse Y");
+			return new Vector3(horizontalInput, verticalInput, 0);
 		}
 		
 		public bool GetButton(int button) {
