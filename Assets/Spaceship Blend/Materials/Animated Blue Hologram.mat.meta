@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Spaceship Blend/Materials/Animated Blue Hologram.mat.meta
 guid: 03030d3ee9a61b64ba575597c8d87be0
+========
+guid: 4e30d9604bcf448aeb8b8ebd1a1fe460
+>>>>>>>> 0b5952e (Neptune Scene):Assets/Planets of the Solar System 3D/Textures/Planets/Materials/Neptune_2k.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
