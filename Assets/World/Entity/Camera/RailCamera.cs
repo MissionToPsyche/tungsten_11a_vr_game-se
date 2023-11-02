@@ -1,3 +1,5 @@
+using System;
+using DevTools;
 using UnityEngine;
 
 namespace World.Entity.Camera {
@@ -6,24 +8,48 @@ namespace World.Entity.Camera {
 	* path between them for the camera to follow.
 	*/
 	public class RailCamera : MonoBehaviour {
-		public GameObject[] points;
-		public float smoothness = 0.5f;
-		public bool loop = true;
-		public float speed = 1.0f; //Negative speed will reverse the path
-		private Vector3[] _rawCoords;
+		public bool DrawPath = true;
+		public bool loop = false;
+		public CameraNode[] Nodes;
+		public int index;
+		public float timer;
 
-		private void Start() { }
+		private void Start() { Update(); }
 
-		private void Update() { }
+		private void Update() {
+			MoveCamera();
+		}
 
-		private void SmoothPoints() {
-			_rawCoords = new Vector3[points.Length];
-			for(int i = 0; i < points.Length; i++) {
-				_rawCoords[i] = points[i].transform.position;
+		/**
+		 * Gradually moves the camera to the next node and rotates it to the next node's rotation.
+		 */
+		private void MoveCamera() {
+			if(Nodes == null || Nodes.Length == 0) return;
+			if(!DrawPath || (index >= Nodes.Length - 1 && !loop)) return;
+			CameraNode currentNode = Nodes[index];
+			CameraNode nextNode = Nodes[(index + 1) % Nodes.Length];
+			Vector3 targetPosition = Vector3.Lerp(currentNode.Position, nextNode.Position, timer);
+			Vector3 targetRotation = Vector3.Lerp(currentNode.Rotation, nextNode.Rotation, timer);
+			transform.position = targetPosition;
+			transform.rotation = Quaternion.Euler(targetRotation);
+			timer += Time.deltaTime * currentNode.TransitionSpeed;
+			if(timer >= 1.0f) {
+				timer = 0.0f;
+				index = (index + 1) % Nodes.Length;
 			}
-
-			for(int i = points.Length; i < _rawCoords.Length; i++) {
-				_rawCoords[i] = Vector3.Lerp(_rawCoords[i - 1], _rawCoords[0], ((float)i / _rawCoords.Length));
+		}
+		
+		private void OnDrawGizmos() {
+			if(Nodes != null && Nodes.Length > 0 && DrawPath) {
+				for(int i = 0; i < Nodes.Length - 1; ++i) {
+					if(Nodes[i] != null && Nodes[i + 1] != null) {
+						Color color = (i == index || i == index - 1) ? Color.green : Color.blue;
+						DebugDrawUtil.DrawSphere(Nodes[i].Position, 0.15f, color);
+						DebugDrawUtil.DrawSphere(Nodes[i + 1].Position, 0.15f, color);
+						DebugDrawUtil.DrawSolidLine(Nodes[i].Position, Nodes[i + 1].Position, color);
+						DebugDrawUtil.DrawArrow(Nodes[i + 1].Position, (Nodes[i + 1].Position - Nodes[i].Position) * 0.1f, color);
+					}
+				}
 			}
 		}
 	}
