@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public string scene;
 
     private void Awake()
     {
@@ -12,7 +13,7 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        SceneManager.LoadScene("Mercury");
+        SceneManager.LoadScene(scene);
     }
 
     public void OnPointerUp(PointerEventData eventData)
