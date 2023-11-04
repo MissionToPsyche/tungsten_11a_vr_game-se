@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 867658337}
   - component: {fileID: 867658336}
   - component: {fileID: 867658335}
+  - component: {fileID: 867658338}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -461,6 +462,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1020334498}
   m_LocalEulerAnglesHint: {x: 37.106, y: -7.288, z: -0.899}
+--- !u!114 &867658338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867658334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63efb0261ed060647a28694b1dba68f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawPath: 1
+  loop: 0
+  Nodes: []
+  index: 0
+  timer: 0
 --- !u!4 &888332119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5148213443558534795, guid: 92c93a1ecd8840f4abad0e898b03798d,
@@ -756,6 +774,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 427877491}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1942448599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942448600}
+  m_Layer: 0
+  m_Name: CameraRail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1942448600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942448599}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1947379550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1292,3 +1341,4 @@ SceneRoots:
   - {fileID: 607165463}
   - {fileID: 102814687}
   - {fileID: 1020334497}
+  - {fileID: 1942448600}
