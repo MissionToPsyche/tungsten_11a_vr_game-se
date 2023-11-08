@@ -4,46 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Spaceship.unity
-    guid: 314615eb37463594394e52624500bb95
-  - enabled: 1
-    path: Assets/Scenes/Earth.unity
-    guid: e1f25168b64a84440af53f7e5423c12c
-  - enabled: 1
-    path: Assets/Scenes/EarthDemo.unity
-    guid: df593a320500c864b944dbe6d9028b42
-  - enabled: 1
-    path: Assets/Scenes/Jupiter.unity
-    guid: 6fa299a1205a1e64090ce01d2ed9d2f3
-  - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 1c6ecfc0eac68af4f9a7727575edebba
-  - enabled: 1
-    path: Assets/Scenes/Mars.unity
-    guid: 4b23edaadac3ed54293e974fec2b3e87
-  - enabled: 1
-    path: Assets/Scenes/Mercury.unity
-    guid: 28ba5e5b78cce7641b43c7a95beb5cca
-  - enabled: 1
-    path: Assets/Scenes/Neptune.unity
-    guid: f99a7ef71b08241368dfa20604c0cd33
-  - enabled: 1
-    path: Assets/Scenes/Psyche.unity
-    guid: dbfbe6668ea382640aea6ab8806774f8
-  - enabled: 1
-    path: Assets/Scenes/Saturn.unity
-    guid: c5f82237b1a41f24681e61a3a3d013b8
-  - enabled: 1
-    path: Assets/Scenes/Scene.unity
-    guid: eb485f2664f0c0a4499072aaa09426ca
-  - enabled: 1
-    path: Assets/Scenes/Uranus.unity
-    guid: 12d39f7a78926484388490240717c7e6
-  - enabled: 1
-    path: Assets/Scenes/Venus.unity
-    guid: 666d0ca2f06472042be54a1cda5b10f9
+  m_Scenes: []
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
@@ -57,4 +18,3 @@ EditorBuildSettings:
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: a9a6963505ddf7f4d886008c6dc86122,
       type: 2}
-  m_UseUCBPForAssetBundles: 0
