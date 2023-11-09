@@ -230,6 +230,12 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.0000008
   m_Center: {x: -0.00000795722, y: 0.00012239814, z: -7.861767e-15}
+--- !u!1 &903586889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3277880994232463398, guid: 92c93a1ecd8840f4abad0e898b03798d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1491380712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1256101804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3985034332343536470, guid: 92c93a1ecd8840f4abad0e898b03798d,
@@ -1152,6 +1158,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1346105759}
+    - targetCorrespondingSourceObject: {fileID: -3277880994232463398, guid: 92c93a1ecd8840f4abad0e898b03798d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1937787986}
+    - targetCorrespondingSourceObject: {fileID: -3277880994232463398, guid: 92c93a1ecd8840f4abad0e898b03798d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1937787987}
     - targetCorrespondingSourceObject: {fileID: -6668841902591212553, guid: 92c93a1ecd8840f4abad0e898b03798d,
         type: 3}
       insertIndex: -1
@@ -1579,6 +1593,40 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!135 &1937787986
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903586889}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 32.311016
+  m_Center: {x: 0.000061035156, y: 0.00012207031, z: 0.00048828125}
+--- !u!114 &1937787987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903586889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4aa0baa2bc5043bc0f8a41578f9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Psyche
 --- !u!1 &2007712380
 GameObject:
   m_ObjectHideFlags: 0

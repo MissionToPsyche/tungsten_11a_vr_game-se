@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &151891947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3277880994232463398, guid: 92c93a1ecd8840f4abad0e898b03798d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1619590592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &275732088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1411,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1619590604}
+    - targetCorrespondingSourceObject: {fileID: -3277880994232463398, guid: 92c93a1ecd8840f4abad0e898b03798d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903629424}
+    - targetCorrespondingSourceObject: {fileID: -3277880994232463398, guid: 92c93a1ecd8840f4abad0e898b03798d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903629423}
     - targetCorrespondingSourceObject: {fileID: -6668841902591212553, guid: 92c93a1ecd8840f4abad0e898b03798d,
         type: 3}
       insertIndex: -1
@@ -1632,6 +1646,40 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.0000011
   m_Center: {x: 0.000030189753, y: 0.00024446845, z: 0.00012207031}
+--- !u!114 &1903629423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151891947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4aa0baa2bc5043bc0f8a41578f9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Psyche
+--- !u!135 &1903629424
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151891947}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 32.311016
+  m_Center: {x: 0.000061035156, y: 0.00012207031, z: 0.00048828125}
 --- !u!1001 &2008694213
 PrefabInstance:
   m_ObjectHideFlags: 0
