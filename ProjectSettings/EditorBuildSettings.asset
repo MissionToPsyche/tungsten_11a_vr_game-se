@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 1c6ecfc0eac68af4f9a7727575edebba
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8932d31c1b6b7f944a455e83b70be14a
+  - enabled: 1
     path: Assets/Scenes/Mars.unity
     guid: 4b23edaadac3ed54293e974fec2b3e87
   - enabled: 1
