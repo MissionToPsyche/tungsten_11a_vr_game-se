@@ -4,20 +4,27 @@ using System.IO;
 
 public class ScrollableText : MonoBehaviour
 {
-    public string textFilePath;
+    public string textFileName;
     public Text textComponent;
 
     void Start()
     {
-        string fullPath = "Assets/Resources/" + textFilePath;
-        if (File.Exists(fullPath))
+        if (string.IsNullOrEmpty(textFileName))
         {
-            string narratorScript = File.ReadAllText(fullPath);
+            Debug.LogError("Text file name is empty.");
+            return;
+        }
+
+        TextAsset textAsset = Resources.Load<TextAsset>(textFileName);
+
+        if (textAsset != null)
+        {
+            string narratorScript = textAsset.text;
             SetText(narratorScript);
         }
         else
         {
-            Debug.LogError("File not found: " + fullPath);
+            Debug.LogError("File not found: " + textFileName);
         }
     }
 
