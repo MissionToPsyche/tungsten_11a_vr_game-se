@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00004327564, g: 0.000095573596, b: 0.00004327564,
+  m_IndirectSpecularColor: {r: 0.000043681564, g: 0.000095573596, b: 0.000043681564,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -394,7 +394,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 999000
   field of view: 45.352448
   orthographic: 0
@@ -826,7 +826,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8111455430085014225, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1628554583}
+    - targetCorrespondingSourceObject: {fileID: 8111455430085014225, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1628554582}
   m_SourcePrefab: {fileID: 100100000, guid: 7b7a40e0d0201d14188c936f245ec0a4, type: 3}
 --- !u!4 &1628554579 stripped
 Transform:
@@ -840,6 +848,46 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1628554578}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1628554581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8111455430085014225, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1628554578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1628554582
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628554581}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.0000011
+  m_Center: {x: -0.00000032782557, y: 0.0000003278258, z: -2.9309888e-14}
+--- !u!114 &1628554583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628554581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4aa0baa2bc5043bc0f8a41578f9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Jupiter
 --- !u!1001 &1746036634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,7 +972,8 @@ PrefabInstance:
       value: Sun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9169511252517106227, guid: 5f776740c447e45afb25edbca842de92, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f776740c447e45afb25edbca842de92, type: 3}
