@@ -8,11 +8,11 @@ public class ToggleMap : MonoBehaviour
 
     private bool mapVisible = false;
 
-    private List<InputDevice> devicesWithPrimaryButton;
+    private List<InputDevice> devices;
 
     void Start()
     {
-        List<InputDevice> devices = new List<InputDevice>();
+        devices = new List<InputDevice>();
         InputDevices.GetDevices(devices);
 
         if (devices.Count == 0) {
@@ -20,6 +20,7 @@ public class ToggleMap : MonoBehaviour
             return;
         }
 
+        //if perfomance is an issue, try removing devices that don't have the characteristics we need
         foreach (var device in devices)
         {
             //CheckPrimaryButton(device);
@@ -29,7 +30,7 @@ public class ToggleMap : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || PrimaryKeyPressed())
         {
             toggleMap();
         }
@@ -40,4 +41,18 @@ public class ToggleMap : MonoBehaviour
         mapVisible = !mapVisible;
         ssMapObject.SetActive(mapVisible);
     }
+
+    private bool PrimaryKeyPressed() {
+        foreach (var device in devices)
+        {
+            bool isKeyPressed;
+            if (device.TryGetFeatureValue(CommonUsages.primaryButton, out isKeyPressed) && isKeyPressed)
+            {
+                Debug.Log("Toggle button is pressed.");
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
