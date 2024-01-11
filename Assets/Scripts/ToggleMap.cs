@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ToggleMap : MonoBehaviour
 {
     public GameObject ssMapObject;
+
+    private XRController xrController;
 
     private bool mapVisible = false;
 
@@ -12,6 +16,16 @@ public class ToggleMap : MonoBehaviour
 
     void Start()
     {
+        xrController = GetComponent<XRController>();
+
+        if (xrController == null)
+        {
+            Debug.LogError("XR Controller component not found on this GameObject.");
+        }
+        else {
+            Debug.Log("XR Controller found!!!!")
+        }
+
         devices = new List<InputDevice>();
         InputDevices.GetDevices(devices);
 
