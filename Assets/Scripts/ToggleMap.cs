@@ -1,51 +1,45 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
-
+// using UnityEngine.XR;
+// using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class ToggleMap : MonoBehaviour
 {
     public GameObject ssMapObject;
 
-    private XRController xrController;
-
     private bool mapVisible = false;
 
-    private List<InputDevice> devices;
+   // private List<UnityEngine.XR.InputDevice> devices;
 
     void Start()
     {
-        xrController = GetComponent<XRController>();
+        // devices = new List<UnityEngine.XR.InputDevice>();
+        // InputDevices.GetDevices(devices);
 
-        if (xrController == null)
-        {
-            Debug.LogError("XR Controller component not found on this GameObject.");
-        }
-        else {
-            Debug.Log("XR Controller found!!!!")
-        }
+        // if (devices.Count == 0) {
+        //     Debug.Log("No VR devices have been detected in ToggleMap.cs");
+        //     return;
+        // }
 
-        devices = new List<InputDevice>();
-        InputDevices.GetDevices(devices);
-
-        if (devices.Count == 0) {
-            Debug.Log("No VR devices have been detected in ToggleMap.cs");
-            return;
-        }
-
-        //if perfomance is an issue, try removing devices that don't have the characteristics we need
-        foreach (var device in devices)
-        {
-            //CheckPrimaryButton(device);
-            Debug.Log(string.Format("Device found with name '{0}' and characterisitcs '{1}'", device.name, device.characteristics.ToString()));
-        }
+        // //if perfomance is an issue, try removing devices that don't have the characteristics we need
+        // foreach (var device in devices)
+        // {
+        //     //CheckPrimaryButton(device);
+        //     Debug.Log(string.Format("Device found with name '{0}' and characterisitcs '{1}'", device.name, device.characteristics.ToString()));
+        // }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || PrimaryKeyPressed())
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            toggleMap();
+        }
+    }
+
+    public void PrimaryButtonPressed(InputAction.CallbackContext context) {
+        if (context.performed) {
             toggleMap();
         }
     }
@@ -56,17 +50,18 @@ public class ToggleMap : MonoBehaviour
         ssMapObject.SetActive(mapVisible);
     }
 
-    private bool PrimaryKeyPressed() {
-        foreach (var device in devices)
-        {
-            bool isKeyPressed;
-            if (device.TryGetFeatureValue(CommonUsages.primaryButton, out isKeyPressed) && isKeyPressed)
-            {
-                Debug.Log("Toggle button is pressed.");
-                return true;
-            }
-        }
-        return false;
-    }
+    // private bool PrimaryKeyPressed() {
+    //     foreach (var device in devices)
+    //     {
+    //         bool isKeyPressed;
+    //         if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out isKeyPressed) && isKeyPressed)
+    //         {
+    //             Debug.Log("Toggle button is pressed.");
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+
 }
 
