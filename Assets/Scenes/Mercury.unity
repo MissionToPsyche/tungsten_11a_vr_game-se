@@ -10990,6 +10990,7 @@ MonoBehaviour:
   - {fileID: 1329541596}
   index: 0
   timer: 0
+  spaceship: {fileID: 0}
 --- !u!1 &1198587984
 GameObject:
   m_ObjectHideFlags: 0
@@ -13336,6 +13337,7 @@ MonoBehaviour:
   - {fileID: 1329541596}
   index: 0
   timer: 0
+  spaceship: {fileID: 1604265364}
 --- !u!1 &1616565256
 GameObject:
   m_ObjectHideFlags: 0

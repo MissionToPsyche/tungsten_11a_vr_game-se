@@ -9,6 +9,9 @@ public class BoxColliderTextTrigger : MonoBehaviour
     public GameObject ReadablePopupScreen;
     private void OnTriggerEnter(Collider other)
     {
-        ReadablePopupScreen.SetActive(true);
+        if (ReadablePopupScreen != null)
+        {
+            ReadablePopupScreen.SetActive(true);
+        }
     }
 }
