@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00004327564, g: 0.000095573596, b: 0.00004327564,
+  m_IndirectSpecularColor: {r: 0.000043681564, g: 0.000095573596, b: 0.000043681564,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 4553828}
   - component: {fileID: 4553827}
   - component: {fileID: 4553826}
+  - component: {fileID: 4553829}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -428,6 +429,19 @@ MonoBehaviour:
   m_SmoothMotionEnabled: 1
   m_SmoothTurnEnabled: 0
   m_UIScrollingEnabled: 1
+--- !u!114 &4553829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1de557358bc4884d99596081421269d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ssMapObject: {fileID: 741373777}
 --- !u!1 &20616091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,6 +5322,12 @@ MonoBehaviour:
   m_EnableARRaycasting: 0
   m_OccludeARHitsWith3DObjects: 0
   m_OccludeARHitsWith2DObjects: 0
+--- !u!1 &741373777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3876968065267463064, guid: 8e5c3c69904b430478b925d4669aace9,
+    type: 3}
+  m_PrefabInstance: {fileID: 697402399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &745588154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8539,6 +8559,7 @@ GameObject:
   - component: {fileID: 1390048565}
   - component: {fileID: 1390048564}
   - component: {fileID: 1390048563}
+  - component: {fileID: 1390048567}
   m_Layer: 2
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -8677,6 +8698,53 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.76072, z: 0}
+--- !u!114 &1390048567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390048560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: be89838db0058e046bc8c02814feaf1b,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4553829}
+        m_TargetAssemblyTypeName: ToggleMap, Assembly-CSharp
+        m_MethodName: PrimaryButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 57ae41cf-b3c1-4cfb-ab90-b207184b6908
+    m_ActionName: ClickButton/PrimaryButtonPress
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: ClickButton
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1397404409
 GameObject:
   m_ObjectHideFlags: 0
