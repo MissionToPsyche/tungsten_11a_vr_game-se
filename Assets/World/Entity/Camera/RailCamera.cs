@@ -35,10 +35,19 @@ namespace World.Entity.Camera
             CameraNode currentNode = Nodes[index];
             CameraNode nextNode = Nodes[(index + 1) % Nodes.Length];
             Vector3 targetPosition = Vector3.Lerp(currentNode.Position, nextNode.Position, timer);
-            Vector3 targetRotation = Vector3.Lerp(currentNode.Rotation, nextNode.Rotation, timer);
             spaceship.position = targetPosition;
-            //spaceship.rotation = ...
+
+            // Calculate the direction to the next node
+            Vector3 direction = nextNode.Position - currentNode.Position;
+
+            // Use Quaternion.LookRotation to get the rotation from the direction
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+            // Smoothly rotate the spaceship towards the target rotation
+            spaceship.rotation = Quaternion.Slerp(spaceship.rotation, targetRotation, Time.deltaTime * currentNode.TransitionSpeed);
+
             timer += Time.deltaTime * currentNode.TransitionSpeed;
+
             if (timer >= 1.0f)
             {
                 timer = 0.0f;
