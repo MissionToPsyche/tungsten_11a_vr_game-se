@@ -1130,7 +1130,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Starter Text
+  m_Text: "Welcome to the Psyche asteroid, one of millions of asteroids in the asteroid
+    belt. Unlike the asteroid belt\u2019s depiction in popular culture, this sector
+    of the solar system is rather empty. If you were to fly through the asteroid
+    belt, it would require astronomical luck to run into a single asteroid. Today,
+    you have arrived at one in particular: the Psyche asteroid. And what a fascinating
+    asteroid it is.\r\n\r\nUnlike more common asteroids, made of rock or ice, Psyche
+    is the solar system\u2019s largest known metal asteroid. It\u2019s so large that
+    some scientists believe that Psyche was the core of a planetoid forming in the
+    early solar system whose outer rocky layer got knocked off in collisions. \r\n\r\nThis
+    brilliant, metallic asteroid will be receiving a visit in two-thousand and twenty-nine.
+    The NASA Psyche mission launched an unmanned spacecraft in October of two-thousand
+    and twenty-three which will be used to research this asteroid. The spacecraft
+    is equipped with a variety of scientific instruments which will give scientists
+    an understanding into what this metallic asteroid is like. Scientists are hoping
+    that, if Psyche is an exposed planetary core, it can give us insight into what
+    our own core is like.\r\n"
 --- !u!222 &159373022
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2078,7 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ced8063b21b5e47855304124fc0b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFileName: Mercury
+  textFileName: Psyche
   textComponent: {fileID: 159373021}
 --- !u!65 &339488076
 BoxCollider:
@@ -2525,7 +2540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReadablePopupScreen: {fileID: 0}
+  ReadablePopupScreen: {fileID: 339488073}
 --- !u!65 &366464411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2936,8 +2951,8 @@ RectTransform:
   - {fileID: 1301351096}
   m_Father: {fileID: 1539432994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.00003780444, y: 0}
+  m_AnchorMax: {x: 0.9999452, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5816,7 +5831,7 @@ RectTransform:
   m_Father: {fileID: 243943803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 0.99997413}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5975,8 +5990,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 849944113}
   m_HandleRect: {fileID: 842087300}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.99997413
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6169,8 +6184,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 899218397}
   m_HandleRect: {fileID: 432621290}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 0.40840518
+  m_Size: 0.99990743
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7184,7 +7199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReadablePopupScreen: {fileID: 0}
+  ReadablePopupScreen: {fileID: 339488073}
 --- !u!65 &1089757717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8752,7 +8767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ced8063b21b5e47855304124fc0b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFileName: Mercury
+  textFileName: Psyche
   textComponent: {fileID: 1927569830}
 --- !u!65 &1150065162
 BoxCollider:
@@ -10791,7 +10806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000118255615, y: -0.00015620602}
+  m_AnchoredPosition: {x: -0.0049319416, y: 0.03448426}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1440911129
@@ -13869,7 +13884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReadablePopupScreen: {fileID: 0}
+  ReadablePopupScreen: {fileID: 339488073}
 --- !u!65 &1852405990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14834,7 +14849,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Starter Text
+  m_Text: "Welcome to the Psyche asteroid, one of millions of asteroids in the asteroid
+    belt. Unlike the asteroid belt\u2019s depiction in popular culture, this sector
+    of the solar system is rather empty. If you were to fly through the asteroid
+    belt, it would require astronomical luck to run into a single asteroid. Today,
+    you have arrived at one in particular: the Psyche asteroid. And what a fascinating
+    asteroid it is.\r\n\r\nUnlike more common asteroids, made of rock or ice, Psyche
+    is the solar system\u2019s largest known metal asteroid. It\u2019s so large that
+    some scientists believe that Psyche was the core of a planetoid forming in the
+    early solar system whose outer rocky layer got knocked off in collisions. \r\n\r\nThis
+    brilliant, metallic asteroid will be receiving a visit in two-thousand and twenty-nine.
+    The NASA Psyche mission launched an unmanned spacecraft in October of two-thousand
+    and twenty-three which will be used to research this asteroid. The spacecraft
+    is equipped with a variety of scientific instruments which will give scientists
+    an understanding into what this metallic asteroid is like. Scientists are hoping
+    that, if Psyche is an exposed planetary core, it can give us insight into what
+    our own core is like.\r"
 --- !u!222 &1927569831
 CanvasRenderer:
   m_ObjectHideFlags: 0
