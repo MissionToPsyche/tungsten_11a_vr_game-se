@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
 
 public class PauseMenu : MonoBehaviour
 {
@@ -15,6 +17,18 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (isPaused)
+            {
+                Resume();
+            } else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void ContolllerMenuButtonPressed(InputAction.CallbackContext context) {
+        if (context.performed) {
             if (isPaused)
             {
                 Resume();
