@@ -200,7 +200,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 864620440}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ContolllerMenuButtonPressed
+        m_MethodName: ControllerMenuButtonPressed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -212,6 +212,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8adea53d-9a9e-4623-bf7c-451fef7b3c09
     m_ActionName: ClickButton/MenuButtonPress
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 864620440}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ControllerSecondaryButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2df78157-c85e-40c1-853e-e69b2e83a532
+    m_ActionName: ClickButton/SecondaryButtonPress
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 864620440}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ControllerTriggerButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 65240a89-f686-42de-a413-b6327bd1244f
+    m_ActionName: ClickButton/TriggerPress
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ClickButton

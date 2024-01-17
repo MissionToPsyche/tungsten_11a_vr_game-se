@@ -27,16 +27,25 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void ContolllerMenuButtonPressed(InputAction.CallbackContext context) {
+    public void ControllerMenuButtonPressed(InputAction.CallbackContext context) {
+        Debug.Log("Start Button Pressed");
         if (context.performed) {
             if (isPaused)
-            {
+            {   
                 Resume();
             } else
             {
                 Pause();
             }
         }
+    }
+
+    public void ControllerSecondaryButtonPressed(InputAction.CallbackContext context) {
+        Debug.Log("Secondary Button Pressed");
+    }
+
+    public void ControllerTriggerButtonPressed(InputAction.CallbackContext context) {
+        Debug.Log("Trigger Button Pressed");
     }
 
     public void Resume()
