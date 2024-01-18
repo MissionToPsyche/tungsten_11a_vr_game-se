@@ -6643,6 +6643,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005254912}
   m_CullTransparentMesh: 1
+--- !u!1 &1040316117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3876968065267463064, guid: 8e5c3c69904b430478b925d4669aace9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2089198749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1056828435
 GameObject:
   m_ObjectHideFlags: 0
@@ -8044,6 +8050,8 @@ GameObject:
   - component: {fileID: 1141249697}
   - component: {fileID: 1141249696}
   - component: {fileID: 1141249695}
+  - component: {fileID: 1141249698}
+  - component: {fileID: 1141249699}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -8339,6 +8347,33 @@ MonoBehaviour:
   m_SmoothMotionEnabled: 1
   m_SmoothTurnEnabled: 0
   m_UIScrollingEnabled: 1
+--- !u!114 &1141249698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141249693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873f460543e74264db64034744fdb9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1770298329}
+  mainMenuScene: MainMenu
+--- !u!114 &1141249699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141249693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1de557358bc4884d99596081421269d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ssMapObject: {fileID: 1040316117}
 --- !u!1 &1141456848
 GameObject:
   m_ObjectHideFlags: 0
@@ -10116,6 +10151,7 @@ GameObject:
   - component: {fileID: 1364012027}
   - component: {fileID: 1364012026}
   - component: {fileID: 1364012025}
+  - component: {fileID: 1364012029}
   m_Layer: 2
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -10254,6 +10290,77 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.76072, z: 0}
+--- !u!114 &1364012029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364012022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: be89838db0058e046bc8c02814feaf1b,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1141249699}
+        m_TargetAssemblyTypeName: ToggleMap, Assembly-CSharp
+        m_MethodName: PrimaryButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 57ae41cf-b3c1-4cfb-ab90-b207184b6908
+    m_ActionName: ClickButton/PrimaryButtonPress
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1141249698}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ControllerMenuButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8adea53d-9a9e-4623-bf7c-451fef7b3c09
+    m_ActionName: ClickButton/MenuButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2df78157-c85e-40c1-853e-e69b2e83a532
+    m_ActionName: ClickButton/SecondaryButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65240a89-f686-42de-a413-b6327bd1244f
+    m_ActionName: ClickButton/TriggerPress
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: ClickButton
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1367662216
 GameObject:
   m_ObjectHideFlags: 0

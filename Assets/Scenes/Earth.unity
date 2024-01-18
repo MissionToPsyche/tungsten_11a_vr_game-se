@@ -3248,6 +3248,7 @@ MonoBehaviour:
   - {fileID: 1149837317}
   index: 0
   timer: 0
+  spaceship: {fileID: 0}
 --- !u!114 &735923066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5295,6 +5296,7 @@ MonoBehaviour:
   - {fileID: 1149837317}
   index: 0
   timer: 0
+  spaceship: {fileID: 0}
 --- !u!1 &1149837316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5759,6 +5761,30 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 57ae41cf-b3c1-4cfb-ab90-b207184b6908
     m_ActionName: ClickButton/PrimaryButtonPress
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1880672720}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ControllerMenuButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8adea53d-9a9e-4623-bf7c-451fef7b3c09
+    m_ActionName: ClickButton/MenuButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2df78157-c85e-40c1-853e-e69b2e83a532
+    m_ActionName: ClickButton/SecondaryButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65240a89-f686-42de-a413-b6327bd1244f
+    m_ActionName: ClickButton/TriggerPress
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ClickButton
@@ -10873,6 +10899,7 @@ GameObject:
   - component: {fileID: 1880672717}
   - component: {fileID: 1880672716}
   - component: {fileID: 1880672719}
+  - component: {fileID: 1880672720}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -11181,6 +11208,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 385708777}
+--- !u!114 &1880672720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880672714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873f460543e74264db64034744fdb9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 15055527}
+  mainMenuScene: MainMenu
 --- !u!1 &1926189546 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1267340433455815719, guid: 8e5c3c69904b430478b925d4669aace9,
