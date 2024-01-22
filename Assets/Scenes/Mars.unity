@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35b8f64d50bd08489cb876ce6c6c9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionSpeed: 0.075
+  TransitionSpeed: 0.025
 --- !u!1 &21251871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,7 +5654,7 @@ RectTransform:
   - {fileID: 1269482369}
   m_Father: {fileID: 1103618943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.00024455786, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -5725,11 +5725,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780959071}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: e11cca7397b8a3d40b4b9eebbffb5b5d, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5896,7 +5896,7 @@ Transform:
   m_GameObject: {fileID: 780959071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2942.17, y: 1.21, z: -1499.8}
+  m_LocalPosition: {x: -2985.71, y: 1.21, z: -1499.8}
   m_LocalScale: {x: 1, y: 7.698, z: 12.213}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5985,8 +5985,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 803766208}
   m_HandleRect: {fileID: 2037392692}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.99999017
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6492,7 +6492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000118255615, y: -0.00015620602}
+  m_AnchoredPosition: {x: -0.000118255615, y: 0.0005767138}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &865424068
@@ -7349,11 +7349,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023920777}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 4710ef05612479646b9d4c15d2aa3b60, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8781,7 +8781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35b8f64d50bd08489cb876ce6c6c9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionSpeed: 0.1
+  TransitionSpeed: 0.022
 --- !u!1 &1219790281
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,8 +10416,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1436543391}
   m_HandleRect: {fileID: 770698766}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1.3170068
+  m_Size: 0.99975544
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11579,11 +11579,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531471913}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 5e5d4a79004c4bd40b1d260fb6d42389, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -12361,11 +12361,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712924031}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 4dc7d788d98e60c4389a1c51e995acc2, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -12519,7 +12519,7 @@ Transform:
   m_GameObject: {fileID: 1712924031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -984, y: 1.21, z: -1451.03}
+  m_LocalPosition: {x: -588, y: 1.21, z: -1411.51}
   m_LocalScale: {x: 1, y: 7.698, z: 12.213}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13863,7 +13863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35b8f64d50bd08489cb876ce6c6c9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionSpeed: 0.075
+  TransitionSpeed: 0.035
 --- !u!1 &2135135461
 GameObject:
   m_ObjectHideFlags: 0
