@@ -8051,6 +8051,7 @@ GameObject:
   - component: {fileID: 1141249696}
   - component: {fileID: 1141249695}
   - component: {fileID: 1141249698}
+  - component: {fileID: 1141249699}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -8359,6 +8360,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 920341059}
+--- !u!114 &1141249699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141249693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873f460543e74264db64034744fdb9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1770298329}
+  mainMenuScene: MainMenu
 --- !u!1 &1141456848
 GameObject:
   m_ObjectHideFlags: 0
