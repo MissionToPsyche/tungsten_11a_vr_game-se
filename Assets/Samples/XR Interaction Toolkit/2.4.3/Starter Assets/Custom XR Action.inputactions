@@ -1,5 +1,5 @@
 {
-    "name": "Customer XR Action",
+    "name": "Custom XR Action",
     "maps": [
         {
             "name": "ClickButton",
@@ -9,6 +9,33 @@
                     "name": "PrimaryButtonPress",
                     "type": "Button",
                     "id": "57ae41cf-b3c1-4cfb-ab90-b207184b6908",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MenuButtonPress",
+                    "type": "Button",
+                    "id": "8adea53d-9a9e-4623-bf7c-451fef7b3c09",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondaryButtonPress",
+                    "type": "Button",
+                    "id": "2df78157-c85e-40c1-853e-e69b2e83a532",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerPress",
+                    "type": "Button",
+                    "id": "65240a89-f686-42de-a413-b6327bd1244f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -24,6 +51,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "PrimaryButtonPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "044c9eed-78ce-4c7d-aba6-9f2b1ff90608",
+                    "path": "<OculusTouchController>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuButtonPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91d5389c-fc79-428e-8d3c-c5e2aea46588",
+                    "path": "<OculusTouchController>/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryButtonPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44679105-ac9c-40ba-8d4e-b66f9ef55881",
+                    "path": "<OculusTouchController>/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

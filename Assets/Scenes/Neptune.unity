@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00004327564, g: 0.000095573596, b: 0.00004327564,
+  m_IndirectSpecularColor: {r: 0.000043681564, g: 0.000095573596, b: 0.000043681564,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -1369,6 +1369,30 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 57ae41cf-b3c1-4cfb-ab90-b207184b6908
     m_ActionName: ClickButton/PrimaryButtonPress
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 629310765}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ControllerMenuButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8adea53d-9a9e-4623-bf7c-451fef7b3c09
+    m_ActionName: ClickButton/MenuButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2df78157-c85e-40c1-853e-e69b2e83a532
+    m_ActionName: ClickButton/SecondaryButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65240a89-f686-42de-a413-b6327bd1244f
+    m_ActionName: ClickButton/TriggerPress
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ClickButton
@@ -3332,6 +3356,7 @@ GameObject:
   - component: {fileID: 629310762}
   - component: {fileID: 629310761}
   - component: {fileID: 629310764}
+  - component: {fileID: 629310765}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -3640,6 +3665,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 452032529}
+--- !u!114 &629310765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629310759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873f460543e74264db64034744fdb9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 154537660}
+  mainMenuScene: MainMenu
 --- !u!1 &634883314
 GameObject:
   m_ObjectHideFlags: 0
