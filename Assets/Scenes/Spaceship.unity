@@ -154,18 +154,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1491380712}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &59343701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59343700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &59343702
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -225,7 +213,19 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -238,10 +238,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 59343704}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -301,6 +301,19 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &59343704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59343700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Earth
 --- !u!1 &139263569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5051033473910199665, guid: 813631d7ea48d3b4a99aa29b2486c284,
@@ -888,10 +901,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1736109864}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2720,10 +2733,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1957623825}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2814,17 +2827,17 @@ PrefabInstance:
     - target: {fileID: 7111878867462518393, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0038891237
+      value: -0.003
       objectReference: {fileID: 0}
     - target: {fileID: 7111878867462518393, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.8643565
+      value: -4.858
       objectReference: {fileID: 0}
     - target: {fileID: 7111878867462518393, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.530515
+      value: -5.457
       objectReference: {fileID: 0}
     - target: {fileID: 7111878867462518393, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
@@ -2873,15 +2886,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6767036657355647039, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 59343701}
-    - targetCorrespondingSourceObject: {fileID: 6767036657355647039, guid: 7b7a40e0d0201d14188c936f245ec0a4,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 59343703}
     - targetCorrespondingSourceObject: {fileID: 6767036657355647039, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 59343702}
+    - targetCorrespondingSourceObject: {fileID: 6767036657355647039, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 59343704}
     - targetCorrespondingSourceObject: {fileID: 8111455430085014225, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2890,6 +2903,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491380727}
+    - targetCorrespondingSourceObject: {fileID: 8111455430085014225, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491380736}
     - targetCorrespondingSourceObject: {fileID: 2176428988661401547, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2898,6 +2915,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1481713693}
+    - targetCorrespondingSourceObject: {fileID: 2176428988661401547, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1957623825}
     - targetCorrespondingSourceObject: {fileID: 3281594949688485176, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2906,6 +2927,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491380725}
+    - targetCorrespondingSourceObject: {fileID: 3281594949688485176, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491380733}
     - targetCorrespondingSourceObject: {fileID: 4640067000842617930, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2914,6 +2939,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1715498954}
+    - targetCorrespondingSourceObject: {fileID: 4640067000842617930, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1715498959}
     - targetCorrespondingSourceObject: {fileID: 3472237827464739749, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2922,6 +2951,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491380723}
+    - targetCorrespondingSourceObject: {fileID: 3472237827464739749, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491380730}
     - targetCorrespondingSourceObject: {fileID: 5065215616945164901, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2930,6 +2963,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 469297888}
+    - targetCorrespondingSourceObject: {fileID: 5065215616945164901, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736109864}
     - targetCorrespondingSourceObject: {fileID: 357280763968900465, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2938,6 +2975,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1912979744}
+    - targetCorrespondingSourceObject: {fileID: 357280763968900465, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1912979749}
     - targetCorrespondingSourceObject: {fileID: 4775906146859486440, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -2946,6 +2987,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1598827627}
+    - targetCorrespondingSourceObject: {fileID: 4775906146859486440, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1598827632}
   m_SourcePrefab: {fileID: 100100000, guid: 7b7a40e0d0201d14188c936f245ec0a4, type: 3}
 --- !u!4 &1491380713 stripped
 Transform:
@@ -3058,10 +3103,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1491380730}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3214,10 +3259,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1491380733}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3349,10 +3394,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1491380736}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3412,6 +3457,45 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1491380730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Psyche
+--- !u!114 &1491380733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Mercury
+--- !u!114 &1491380736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Jupiter
 --- !u!1001 &1501647293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3420,6 +3504,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1741165885}
     m_Modifications:
+    - target: {fileID: 554134375546044963, guid: 813631d7ea48d3b4a99aa29b2486c284,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1564988233521668904, guid: 813631d7ea48d3b4a99aa29b2486c284,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3914,10 +4003,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1598827632}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3977,6 +4066,19 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1598827632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Venus
 --- !u!135 &1715498954
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4049,10 +4151,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1715498959}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4112,6 +4214,32 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1715498959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Neptune
+--- !u!114 &1736109864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Saturn
 --- !u!1001 &1741165884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4732,10 +4860,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1912979749}
+        m_TargetAssemblyTypeName: VRPlanetMapInteractions, Assembly-CSharp
+        m_MethodName: LoadSceneBasedOnName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4795,6 +4923,19 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1912979749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Uranus
 --- !u!1 &1941168566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,6 +5042,19 @@ Transform:
   - {fileID: 715161853}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -31.123, y: -1.303, z: 2.601}
+--- !u!114 &1957623825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491380721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83c539af0e55384492fa3b54a5d3485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Mars
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
