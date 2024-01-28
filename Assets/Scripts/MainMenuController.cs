@@ -15,7 +15,7 @@ public class MainMenuController : MonoBehaviour
         freePlayButton.onClick.AddListener(FreePlayStart);
         eventGameButton.onClick.AddListener(EventGameStart);
         settingsButton.onClick.AddListener(SettingsScene);
-        freePlayButton.onClick.AddListener(QuitGame);
+        quitButton.onClick.AddListener(QuitGame);
     }
 
     public void FreePlayStart()
@@ -35,6 +35,7 @@ public class MainMenuController : MonoBehaviour
 
     public void QuitGame()
     {
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
