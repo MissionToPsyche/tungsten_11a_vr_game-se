@@ -20,7 +20,7 @@ public class PlayAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameIsPaused = GameObject.Find("Canvas").GetComponent<PauseMenu>().isPaused;
+        //gameIsPaused = GameObject.Find("Canvas").GetComponent<PauseMenu>().isPaused;
         if (gameIsPaused) {
             source.Pause();
         }
