@@ -1,13 +1,9 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
-using System;
-using UnityEditor;
+using UI.Menus;
 
 
-public class MainMenuController : MonoBehaviour
-{
+public class MenuController : MonoBehaviour {
+    /*
     public GameObject mainMenu;
     public GameObject eventModePopup;
     public Button freePlayButton;
@@ -21,9 +17,54 @@ public class MainMenuController : MonoBehaviour
 
     protected static Boolean eventMode = false;    // Keep track of if we are in event mode
     protected static int maxScenes = 15;           // Max number of scenes a player can visit (to be used in event mode only)
+    */  
+    private GUIMenu _activeMenu;
+    private GUIMenu _mainMenu;
+    private GUIMenu _eventMenu;
+    private GUIMenu _nextPlayerMenu;
 
-    private void Start()
-    {
+    private void Start() {
+        _mainMenu = gameObject.AddComponent<MainMenu>();
+        _eventMenu = gameObject.AddComponent<EventMenu>();
+        _nextPlayerMenu = gameObject.AddComponent<NextPlayerMenu>();
+        SetActiveMenu(_mainMenu);
+    }
+    
+    public void SetActiveMenu(GUIMenu menu) {
+        if(IsAnyMenuActive()) _activeMenu.SetActive(false);
+        _activeMenu = menu;
+    }
+    
+    public GUIMenu GetActiveMenu() {
+        return _activeMenu;
+    }
+    
+    public void ClearActiveMenu() {
+        SetActiveMenu(null);
+    }
+    
+    public bool IsActiveMenu(GUIMenu menu) {
+        return _activeMenu == menu;
+    }
+    
+    public bool IsAnyMenuActive() {
+        return _activeMenu != null;
+    }
+    
+    public GUIMenu GetMainMenu() {
+        return _mainMenu;
+    }
+    
+    public GUIMenu GetEventMenu() {
+        return _eventMenu;
+    }
+    
+    public GUIMenu GetNextPlayerMenu() {
+        return _nextPlayerMenu;
+    }
+    
+    /*
+    private void Start() {
         freePlayButton.onClick.AddListener(FreePlayStart);
         eventGameButton.onClick.AddListener(EventModePopup);
         settingsButton.onClick.AddListener(SettingsScene);
@@ -67,16 +108,6 @@ public class MainMenuController : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
-    public static int getMaxScenes()
-    {
-        return maxScenes;
-    }
-
-    public static Boolean isEventMode()
-    {
-        return eventMode;
-    }
-
     public void SettingsScene()
     {
         Debug.Log("Settings page");
@@ -87,4 +118,5 @@ public class MainMenuController : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+    */
 }
