@@ -6,7 +6,7 @@ public class KeepMenuInArea : MonoBehaviour
 {
     public Transform parentObject;
     private float maxDistance = 4f;
-    private Vector3 relativePosition = new Vector3(1, 0.8f, 2);
+    private Vector3 relativePosition = new Vector3(-0.5f, 0.5f, -0.2f);
     private Rigidbody rigibBodyOfMenuItem; 
 
     void Start()
@@ -20,16 +20,23 @@ public class KeepMenuInArea : MonoBehaviour
 
         if(currentDistance > maxDistance)
         {
-            Vector3 newPosition = parentObject.TransformPoint(relativePosition);
-            if (rigibBodyOfMenuItem != null)
-            {
-                rigibBodyOfMenuItem.MovePosition(newPosition);
-            }
-            else
-            {
-                transform.position = newPosition;
-            }
+            ResetToRelativePosition();
+        }
+    }
+    public void ResetPosition()
+    {
+        ResetToRelativePosition();
+    }
+    private void ResetToRelativePosition()
+    {
+        Vector3 newPosition = parentObject.TransformPoint(relativePosition);
+        if (rigibBodyOfMenuItem != null)
+        {
+            rigibBodyOfMenuItem.MovePosition(newPosition);
+        }
+        else
+        {
+            transform.position = newPosition;
         }
     }
 }
-
