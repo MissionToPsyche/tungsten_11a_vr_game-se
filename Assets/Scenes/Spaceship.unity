@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 68769192}
   - component: {fileID: 68769191}
   - component: {fileID: 68769190}
+  - component: {fileID: 68769197}
   m_Layer: 0
   m_Name: Control Menu Object
   m_TagString: Untagged
@@ -445,13 +446,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68769189}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0013352442, y: 0.93757904, z: 0.0035999771, w: -0.34775132}
-  m_LocalPosition: {x: 34.743, y: 59.928, z: -228.088}
-  m_LocalScale: {x: 0.5, y: 0.35, z: 0.01}
+  m_LocalRotation: {x: 0.30581748, y: 0.6144045, z: -0.6677389, w: -0.28828385}
+  m_LocalPosition: {x: 1.066, y: -5.455, z: -5.423}
+  m_LocalScale: {x: 0.50000006, y: 0.34999996, z: 0.010000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1741165885}
   m_LocalEulerAnglesHint: {x: -0.44, y: 220.7, z: 0}
+--- !u!114 &68769197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68769189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb181bbc880dae5499872608e985512e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentObject: {fileID: 139263577}
 --- !u!1 &139263569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5051033473910199665, guid: 813631d7ea48d3b4a99aa29b2486c284,
@@ -553,6 +567,12 @@ MonoBehaviour:
   m_DefaultActionMap: ClickButton
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!4 &139263577 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5051033473910199666, guid: 813631d7ea48d3b4a99aa29b2486c284,
+    type: 3}
+  m_PrefabInstance: {fileID: 1501647293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &190851911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8483542013875060530, guid: 813631d7ea48d3b4a99aa29b2486c284,
@@ -3809,6 +3829,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8459145a2ba740049b047a76d9e4b398,
         type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 68769196}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8459145a2ba740049b047a76d9e4b398,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491380713}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8459145a2ba740049b047a76d9e4b398,
@@ -4566,4 +4590,3 @@ SceneRoots:
   - {fileID: 1741165884}
   - {fileID: 883185582}
   - {fileID: 1941168570}
-  - {fileID: 68769196}
