@@ -69,6 +69,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadSettings()
     {
+        Debug.Log("Setting Button Clicked");
         // TO DO: When a settings page is created, finish this method.
     }
 }
