@@ -14,7 +14,12 @@ public class MainMenuController : MonoBehaviour
     public Button eventGameButton;
     public Button settingsButton;
     public Button quitButton;
-
+    public GameObject creditsMenu;
+    public Button creditsButton;
+    public Button creditsBackButton;
+    public GameObject disclaimerMenu;
+    public Button disclaimerButton;
+    public Button disclaimerBackButton;
     public Button eventGoButton;
     public Button eventModeBackButton;
     public GameObject eventModeInput;
@@ -28,8 +33,19 @@ public class MainMenuController : MonoBehaviour
         eventGameButton.onClick.AddListener(EventModePopup);
         settingsButton.onClick.AddListener(SettingsScene);
         quitButton.onClick.AddListener(QuitGame);
+        creditsButton.onClick.AddListener(CreditsMenu);
+        creditsBackButton.onClick.AddListener(CreditsBackButton);
+        disclaimerButton.onClick.AddListener(DisclaimerMenu);
+        disclaimerBackButton.onClick.AddListener(DisclaimerBackButton);
         eventGoButton.onClick.AddListener(EventModeGo);
         eventModeBackButton.onClick.AddListener(EventModeBack);
+
+        // On start, ensure the menus are set to the correct visibility
+        mainMenu.SetActive(true);
+        eventModePopup.SetActive(false);
+        creditsMenu.SetActive(false);
+        disclaimerMenu.SetActive(false);
+
     }
 
     public void FreePlayStart()
@@ -86,5 +102,29 @@ public class MainMenuController : MonoBehaviour
     {
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
+    }
+
+    public void CreditsMenu()
+    {
+        mainMenu.SetActive(false);
+        creditsMenu.SetActive(true);
+    }
+
+    public void CreditsBackButton()
+    {
+        creditsMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void DisclaimerMenu()
+    {
+        creditsMenu.SetActive(false);
+        disclaimerMenu.SetActive(true);
+    }
+
+    public void DisclaimerBackButton()
+    {
+        disclaimerMenu.SetActive(false);
+        creditsMenu.SetActive(true);
     }
 }
