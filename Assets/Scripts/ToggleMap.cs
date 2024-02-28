@@ -8,6 +8,18 @@ public class ToggleMap : MonoBehaviour
 
     private bool mapVisible = false;
 
+    GameObject sceneEndCanvas;
+
+    AudioSource source;
+
+    public AudioClip systemErrorSound;
+
+    void Start()
+    {
+        sceneEndCanvas = GameObject.Find("SceneEndCanvas");
+        source = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -24,6 +36,9 @@ public class ToggleMap : MonoBehaviour
 
     private void toggleMap()
     {
+        if (sceneEndCanvas.GetComponent<SceneEndTrigger>().triggered) {
+            source.PlayOneShot(systemErrorSound, 0.7F);
+        }
         mapVisible = !mapVisible;
         ssMapObject.SetActive(mapVisible);
     }
