@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReadablePopupScreen: {fileID: 47594515}
+  ReadablePopupScreen: {fileID: 1434677318}
 --- !u!65 &182214230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1165,6 +1165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b880e65d4c4a01e47954991435a2c4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ambientMusic: {fileID: 0}
+  isLastCollider: 0
 --- !u!1 &182677013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,7 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1de557358bc4884d99596081421269d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ssMapObject: {fileID: 8036911199540985951}
+  ssMapObject: {fileID: 423868901}
 --- !u!4 &312259273
 Transform:
   m_ObjectHideFlags: 0
@@ -4492,13 +4494,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1365114156}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 0
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 0.8
   m_Viewport: {fileID: 407155655}
   m_HorizontalScrollbar: {fileID: 1076805506}
   m_VerticalScrollbar: {fileID: 1289317478}
@@ -8902,7 +8904,7 @@ GameObject:
   - component: {fileID: 848278409}
   - component: {fileID: 848278408}
   m_Layer: 5
-  m_Name: "\uF702UI Canvas"
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9327,7 +9329,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 8
+  m_Intensity: 5
   m_Range: 1000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9769,7 +9771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &915285145
 Transform:
   m_ObjectHideFlags: 0
@@ -10649,6 +10651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b880e65d4c4a01e47954991435a2c4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ambientMusic: {fileID: 0}
+  isLastCollider: 0
 --- !u!54 &1057530241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10953,7 +10957,7 @@ MonoBehaviour:
   m_ConstrainedAxisDisplacementMode: 1
   m_TwoHandedRotationMode: 1
   m_AllowTwoHandedScaling: 0
-  m_ThresholdMoveRatioForScale: 0.05
+  m_ThresholdMoveRatioForScale: 1
   m_ClampScaling: 1
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
@@ -11880,7 +11884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1183164523
 Transform:
   m_ObjectHideFlags: 0
@@ -11889,14 +11893,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183164522}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.063978046, y: 0.4932396, z: -0.045375187, w: 0.8663502}
-  m_LocalPosition: {x: -1.4646088, y: 19.448328, z: -32.764793}
+  m_LocalRotation: {x: -0.06474026, y: 0.95236343, z: 0.073411934, w: -0.28883103}
+  m_LocalPosition: {x: 117, y: -8.1, z: 1091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1977010210}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -3.79, y: 59.579, z: -8.166}
+  m_LocalEulerAnglesHint: {x: -5.879, y: 214.236, z: -9.59}
 --- !u!114 &1183164524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11924,7 +11928,7 @@ MonoBehaviour:
   - {fileID: 389927684}
   index: 0
   timer: 0
-  spaceship: {fileID: 0}
+  spaceship: {fileID: 1183164523}
 --- !u!1 &1198587984
 GameObject:
   m_ObjectHideFlags: 0
@@ -12642,7 +12646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1314922944
 Transform:
   m_ObjectHideFlags: 0
@@ -14517,6 +14521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b880e65d4c4a01e47954991435a2c4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ambientMusic: {fileID: 0}
+  isLastCollider: 0
 --- !u!54 &1616565259
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14608,7 +14614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1617043143
 Transform:
   m_ObjectHideFlags: 0
@@ -18057,12 +18063,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1631890754}
   m_SourcePrefab: {fileID: 100100000, guid: 8e5c3c69904b430478b925d4669aace9, type: 3}
---- !u!1 &8036911199540985951 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3876968065267463064, guid: 8e5c3c69904b430478b925d4669aace9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8036911199540985950}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8036911199540985952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2364450138796084451, guid: 8e5c3c69904b430478b925d4669aace9,
