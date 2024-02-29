@@ -11,7 +11,8 @@ public class PlayAudio : MonoBehaviour
      AudioSource source;                                //Script audio source
      private bool played;                               //Boolean to keep track of if the audio has been played 
      private bool gameIsPaused;                         //Boolean to keep track of if the game is paused
-    public AudioClip clip;
+    public AudioClip endOfScenePrompt;                              //End of Scene announcement audio
+    public float lastScriptParagraphLength;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class PlayAudio : MonoBehaviour
             // If this is the last collider and the audio source has a valid clip
             if (isLastCollider && source.clip != null)
             {
-                Invoke("PlayClip", 20f);
+                Invoke("PlayEndOfScenePrompt", lastScriptParagraphLength);
                 if (ambientMusic)
                 {
                     // Start a coroutine to increase the volume of the ambient music after the audio clip length
@@ -52,8 +53,8 @@ public class PlayAudio : MonoBehaviour
         }
     }
 
-    private void PlayClip() {
-        source.PlayOneShot(clip, 1.0F);
+    private void PlayEndOfScenePrompt() {
+        source.PlayOneShot(endOfScenePrompt, 1.0F);
     }
 
     // Coroutine to increase the volume of the ambient music after a delay
