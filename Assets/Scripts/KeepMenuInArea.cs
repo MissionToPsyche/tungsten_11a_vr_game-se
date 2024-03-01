@@ -5,13 +5,20 @@ using UnityEngine;
 public class KeepMenuInArea : MonoBehaviour
 {
     public Transform parentObject;
-    private float maxDistance = 4f;
-    private Vector3 relativePosition = new Vector3(-0.5f, 0.5f, -0.2f);
+    public Transform controlMenu;
+    private float maxDistance = 3f;
+    private Vector3 relativePosition = new Vector3(-0.5f, 0.5f, 0.6f);
     private Rigidbody rigibBodyOfMenuItem; 
 
     void Start()
     {
         rigibBodyOfMenuItem = GetComponent<Rigidbody>();
+        controlMenu = transform.parent.Find("Control Menu Object");
+
+        if (controlMenu == null)
+        {
+            Debug.LogError("Control Menu object not!");
+        }
     }
 
     void Update()
@@ -37,6 +44,18 @@ public class KeepMenuInArea : MonoBehaviour
         else
         {
             transform.position = newPosition;
+        }
+    }
+
+    public void toggleControlMenu()
+    {
+        if(controlMenu.gameObject.activeSelf)
+        {
+            controlMenu.gameObject.SetActive(false);
+        }
+        else
+        {
+            controlMenu.gameObject.SetActive(true);
         }
     }
 }
