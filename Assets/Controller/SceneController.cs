@@ -7,11 +7,28 @@ using UnityEngine.SceneManagement;
  */
 public class SceneController : MonoBehaviour {
 
-	static string _currentScene = "MainMenu";
+	public enum Scene {
+		MainMenu,
+		Earth,
+		Venus,
+		Mercury,
+		Mars,
+		Jupiter,
+		Saturn,
+		Uranus,
+		Neptune,
+		Psyche
+	}
 	
-    public static void LoadScene(string sceneName) {
-	    Debug.Log("[SceneController] Scene Transition: " + _currentScene + " -> " + sceneName);
-        SceneManager.LoadScene(sceneName);
-        _currentScene = sceneName;
+	static Scene _currentScene = Scene.MainMenu;
+	
+    public static void LoadScene(Scene scene) {
+	    Debug.Log("[SceneController] Scene Transition: " + _currentScene + " -> " + scene);
+        SceneManager.LoadScene(scene.ToString());
+        _currentScene = scene;
     }
+    
+    public static Scene GetCurrentScene() {
+	    return _currentScene;
+	}
 }
