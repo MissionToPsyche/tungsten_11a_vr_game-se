@@ -11,7 +11,6 @@ namespace UI.Menus {
 		private bool _needsUpdate;
 		
 		private void Start() {
-		    Initialize();
 		    _camera = Camera.main;
 		 }
 

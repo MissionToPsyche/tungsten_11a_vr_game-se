@@ -1,13 +1,15 @@
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Menus {
 	
 	public class EventMenu : GUIMenu {
+		
 		protected override void Initialize() {
-			transform.Find("EventStartButton").GetComponent<Button>().onClick.AddListener(() => {
-				
+			GameObject.Find("EventModeStartButton").GetComponent<Button>().onClick.AddListener(() => {
+				GetController().GetNextPlayerMenu().SetActive(true);
 			});
-			transform.Find("EventModeBackButton").GetComponent<Button>().onClick.AddListener(() => {
+			GameObject.Find("EventModeBackButton").GetComponent<Button>().onClick.AddListener(() => {
 				GetController().GetMainMenu().SetActive(true);
 			});
 		}
