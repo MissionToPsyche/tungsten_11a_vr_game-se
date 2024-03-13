@@ -1302,6 +1302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &107235676
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10482,6 +10484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &804040140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18310,6 +18314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 1116095749}
+  sceneEndCanvas: {fileID: 0}
+  systemErrorSound: {fileID: 0}
 --- !u!4 &1235846882
 Transform:
   m_ObjectHideFlags: 0
@@ -20858,6 +20864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 0}
+  sceneEndCanvas: {fileID: 0}
+  systemErrorSound: {fileID: 0}
 --- !u!114 &1604675339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28154,6 +28162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &1970994252
 Rigidbody:
   m_ObjectHideFlags: 0
