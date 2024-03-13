@@ -48,6 +48,20 @@ public class MainMenuController : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        // If a player navigates back to the main menu while it is in event mode, we should disable free play to prevent users from getting around the event mode rules
+        // The only way event mode can be turned off is if quit (in the future we should add an 'event mode off' button
+        if (isEventMode())
+        {
+            freePlayButton.enabled = false;
+        }
+        else
+        {
+            freePlayButton.enabled = true;
+        }
+    }
+
     public void FreePlayStart()
     {
         SceneManager.LoadScene("Earth");
