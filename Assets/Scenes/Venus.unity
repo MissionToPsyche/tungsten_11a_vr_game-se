@@ -2241,6 +2241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 0}
+  sceneEndCanvas: {fileID: 0}
+  systemErrorSound: {fileID: 0}
 --- !u!4 &177253255
 Transform:
   m_ObjectHideFlags: 0
@@ -9125,6 +9127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssMapObject: {fileID: 0}
+  sceneEndCanvas: {fileID: 0}
+  systemErrorSound: {fileID: 0}
 --- !u!114 &434793351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11189,6 +11193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &595700989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12676,6 +12682,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &809619121
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18244,6 +18252,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469248954}
   m_CullTransparentMesh: 0
+--- !u!1 &1482480561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1647581975099426, guid: 835acc1a9ebe24c0fa3854c99346f9cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1669298346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482480562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482480561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c20de9ecc8bde41b5ed3a66a8071a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spin: 1
+  spinParent: 0
+  speed: 1.2
+  clockwise: 1
+  direction: 1
+  directionChangeSpeed: 2
 --- !u!1 &1483517017
 GameObject:
   m_ObjectHideFlags: 0
@@ -18546,6 +18578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &1549569490
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20045,7 +20079,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1647581975099426, guid: 835acc1a9ebe24c0fa3854c99346f9cd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1482480562}
   m_SourcePrefab: {fileID: 100100000, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
 --- !u!1 &1681084570
 GameObject:
@@ -21662,6 +21700,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 0}
   isLastCollider: 0
+  endOfScenePrompt: {fileID: 0}
+  lastScriptParagraphLength: 0
 --- !u!54 &1885798458
 Rigidbody:
   m_ObjectHideFlags: 0
