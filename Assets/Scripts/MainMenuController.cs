@@ -22,11 +22,13 @@ public class MainMenuController : MonoBehaviour
     public Button disclaimerBackButton;
     public Button eventGoButton;
     public Button eventModeBackButton;
-    public GameObject eventModeInput;
+    public GameObject eventModeSceneLimitInput;
+    public GameObject eventModeTimeLimitInput;
 
     protected static Boolean eventMode = false;    // Keep track of if we are in event mode
     protected static int maxScenes = 15;           // Max number of scenes a player can visit (to be used in event mode only)
-
+    protected static double timeLimit = 20;        // Time limit per turn while in event mode
+    protected static DateTime startTime;                            // Time in which the game starts
     private void Start()
     {
         freePlayButton.onClick.AddListener(FreePlayStart);
@@ -64,6 +66,7 @@ public class MainMenuController : MonoBehaviour
 
     public void FreePlayStart()
     {
+        startTime = DateTime.Now;
         SceneManager.LoadScene("Earth");
     }
 
@@ -75,19 +78,28 @@ public class MainMenuController : MonoBehaviour
 
     public void EventModeGo()
     {
-        string inputText = eventModeInput.GetComponent<TMP_InputField>().text;
-        int inputNum = 0;
-        Int32.TryParse(inputText, out inputNum);
-        if (inputNum <= 0 || inputNum > 9)
+        string sceneLimitInputText = eventModeSceneLimitInput.GetComponent<TMP_InputField>().text;
+        string timeLimitInputText = eventModeTimeLimitInput.GetComponent<TMP_InputField>().text;
+        bool parseSceneLimit = Int32.TryParse(sceneLimitInputText, out int sceneLimitInputNum);
+        bool parseTimeLimit = Double.TryParse(timeLimitInputText, out double timeLimitInputNum);
+        if (sceneLimitInputNum <= 0 || sceneLimitInputNum > 9 || !parseSceneLimit)
         {
             EditorUtility.DisplayDialog("Warning",
-                "Please enter a number 1 through 9", "OK");
-        } else
+                "Please enter a number 1 through 9 for the scene limit.", "OK");
+        } else if (timeLimitInputNum <= 0 || timeLimitInputNum > 60 || !parseTimeLimit)
         {
-            maxScenes = inputNum;
+            EditorUtility.DisplayDialog("Warning",
+                "Please enter a time limit in minutes between 1 and 60", "OK");
+        }
+        else
+        {
+            maxScenes = sceneLimitInputNum;
             eventMode = true;
-            SceneManager.LoadScene("Earth");
+            timeLimit = timeLimitInputNum;
+            startTime = DateTime.Now;
             Debug.Log("Max Scenes: " + maxScenes);
+            Debug.Log("Time Limit: " + timeLimit);
+            SceneManager.LoadScene("Earth");
         }
     }
 
@@ -95,6 +107,25 @@ public class MainMenuController : MonoBehaviour
     {
         eventModePopup.SetActive(false);
         mainMenu.SetActive(true);
+    }
+
+    public static void resetStartTime()
+    {
+        startTime = DateTime.Now;
+    }
+
+    public static bool checkExceededTimeLimit()
+    {
+        DateTime now = DateTime.Now;
+        TimeSpan timePassed = now - startTime;
+        double minutesPassed = timePassed.TotalMinutes;
+        if (minutesPassed > timeLimit)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
     }
 
     public static int getMaxScenes()
