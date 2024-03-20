@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public string scene;
+    public FadeScreen fadeScreen;
     private int scenesVisited = 0;
 
     private void Awake()
@@ -26,6 +28,7 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        StartCoroutine(GoToSceneRoutine());
         if (MainMenuController.isEventMode() && scenesVisited >= MainMenuController.getMaxScenes() && !MainMenuController.checkExceededTimeLimit())
         {
             scenesVisited = 0;
@@ -57,5 +60,11 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     {
         //Empty
     } 
+
+    IEnumerator GoToSceneRoutine()
+    {
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+    }
 
 }
