@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000043681564, g: 0.000095573596, b: 0.000043681564,
+  m_IndirectSpecularColor: {r: 0.00004327564, g: 0.000095573596, b: 0.00004327564,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -2342,7 +2342,7 @@ PrefabInstance:
     - target: {fileID: 3655432148944881716, guid: 8493d264ef21e77478d4576a45aa6fc3,
         type: 3}
       propertyPath: m_Constraints
-      value: 8
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 3655432148944881716, guid: 8493d264ef21e77478d4576a45aa6fc3,
         type: 3}
@@ -5367,7 +5367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &720550487
 Transform:
   m_ObjectHideFlags: 0
@@ -6143,7 +6143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &800978782
 Transform:
   m_ObjectHideFlags: 0
@@ -15008,7 +15008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1240860338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15035,7 +15035,7 @@ MonoBehaviour:
   - {fileID: 1121908432}
   index: 0
   timer: 0
-  spaceship: {fileID: 2089198750}
+  spaceship: {fileID: 1240860339}
 --- !u!4 &1240860339
 Transform:
   m_ObjectHideFlags: 0
@@ -15045,7 +15045,7 @@ Transform:
   m_GameObject: {fileID: 1240860337}
   serializedVersion: 2
   m_LocalRotation: {x: -0.063978046, y: 0.4932396, z: -0.045375187, w: 0.8663502}
-  m_LocalPosition: {x: -1.4646088, y: 19.448328, z: -32.764793}
+  m_LocalPosition: {x: -3261.2498, y: -148.50671, z: -4207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16300,6 +16300,18 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 57ae41cf-b3c1-4cfb-ab90-b207184b6908
     m_ActionName: ClickButton/PrimaryButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8adea53d-9a9e-4623-bf7c-451fef7b3c09
+    m_ActionName: ClickButton/MenuButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2df78157-c85e-40c1-853e-e69b2e83a532
+    m_ActionName: ClickButton/SecondaryButtonPress
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65240a89-f686-42de-a413-b6327bd1244f
+    m_ActionName: ClickButton/TriggerPress
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ClickButton
@@ -18837,7 +18849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1674641120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19099,17 +19111,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 846df66aefe115441aa6869db4066c88,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 846df66aefe115441aa6869db4066c88,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 846df66aefe115441aa6869db4066c88,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 846df66aefe115441aa6869db4066c88,
         type: 3}
@@ -20045,6 +20057,7 @@ GameObject:
   - component: {fileID: 1852405991}
   - component: {fileID: 1852405990}
   - component: {fileID: 1852405989}
+  - component: {fileID: 1852405992}
   - component: {fileID: 1852405988}
   - component: {fileID: 1852405987}
   - component: {fileID: 1852405986}
@@ -20201,7 +20214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852405985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
   m_Name: 
@@ -20243,6 +20256,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 3.569, y: 41, z: 5.327}
+--- !u!114 &1852405992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852405985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReadablePopupScreen: {fileID: 1150065159}
 --- !u!1 &1880720348
 GameObject:
   m_ObjectHideFlags: 0
@@ -20426,9 +20452,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1985114286}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 0
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -22042,7 +22068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1990626717
 Transform:
   m_ObjectHideFlags: 0
