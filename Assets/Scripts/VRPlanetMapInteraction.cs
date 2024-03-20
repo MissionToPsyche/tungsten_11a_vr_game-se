@@ -2,19 +2,40 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEditor.SearchService;
+using System.Collections.Generic;
+using System.Collections;
 
 public class VRPlanetMapInteractions : MonoBehaviour
 {
+    public FadeScreen fadeScreen;
+    private int scenesVisited = 0;
     [SerializeField]
     private string sceneToLoad;
 
     public void LoadSceneBasedOnName()
     {
         if (!string.IsNullOrEmpty(sceneToLoad)){
-            SceneManager.LoadScene(sceneToLoad);
+            StartCoroutine(GoToSceneRoutine());
+            if (MainMenuController.isEventMode() && scenesVisited >= MainMenuController.getMaxScenes() && !MainMenuController.checkExceededTimeLimit())
+            {
+                scenesVisited = 0;
+                MainMenuController.resetStartTime();
+                SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
+            }
+            else
+            {
+                // No need to increment scenesVisited here, the Awake() method will increment it when the next scene loads
+                SceneManager.LoadScene(sceneToLoad);
+            }
         }
         else{
             Debug.LogWarning("Add a scene name to the 'sceneToLoad' field");
         }
+    }
+    IEnumerator GoToSceneRoutine()
+    {
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
     }
 }
