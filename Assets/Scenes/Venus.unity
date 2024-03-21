@@ -2221,6 +2221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177253255}
   - component: {fileID: 177253254}
+  - component: {fileID: 177253256}
   m_Layer: 0
   m_Name: MapSwitch
   m_TagString: Untagged
@@ -2261,6 +2262,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &177253256
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177253253}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &203671402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Venus
+  fadeScreen: {fileID: 0}
 --- !u!135 &322734394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10000,6 +10098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Uranus
+  fadeScreen: {fileID: 0}
 --- !u!135 &480257967
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10312,6 +10411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Neptune
+  fadeScreen: {fileID: 0}
 --- !u!114 &509720389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10325,6 +10425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Mars
+  fadeScreen: {fileID: 0}
 --- !u!135 &509720390
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10359,6 +10460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Earth
+  fadeScreen: {fileID: 0}
 --- !u!135 &509720392
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11185,6 +11287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Psyche
+  fadeScreen: {fileID: 0}
 --- !u!135 &580275076
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11220,6 +11323,7 @@ GameObject:
   - component: {fileID: 595700989}
   - component: {fileID: 595700988}
   - component: {fileID: 595700987}
+  - component: {fileID: 595700993}
   m_Layer: 0
   m_Name: ScriptTrigger 4
   m_TagString: Untagged
@@ -11337,8 +11441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientMusic: {fileID: 1311933719}
   isLastCollider: 1
-  endOfScenePrompt: {fileID: 0}
-  lastScriptParagraphLength: 0
+  endOfScenePrompt: {fileID: 8300000, guid: 26f3b8d460f8cbd4797d396772f878d8, type: 3}
+  lastScriptParagraphLength: 20
 --- !u!54 &595700989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11415,6 +11519,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 70.978, z: 0}
+--- !u!114 &595700993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595700986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a8c155b12614246aeda3969d011c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pleaseChooseWhichLocationToVisitNextObject: {fileID: 1373538701}
+  VRpleaseChooseWhichLocationToVisitNextObject: {fileID: 1219452372}
 --- !u!1 &596144513
 GameObject:
   m_ObjectHideFlags: 0
@@ -12678,7 +12796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &795224980
 Transform:
   m_ObjectHideFlags: 0
@@ -16525,6 +16643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Jupiter
+  fadeScreen: {fileID: 0}
 --- !u!135 &1209318371
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16625,17 +16744,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219452372}
-  m_LocalRotation: {x: -0.53880316, y: 0.062000897, z: 0.015056306, w: -0.84001213}
-  m_LocalPosition: {x: 0, y: 0, z: 90.8}
+  m_LocalRotation: {x: -0.53879786, y: 0.061707534, z: 0.015244477, w: -0.84003377}
+  m_LocalPosition: {x: 0, y: 0, z: 125.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1463650223}
   m_Father: {fileID: 1805111618}
-  m_LocalEulerAnglesHint: {x: 115.4, y: -196.3, z: 167.6}
+  m_LocalEulerAnglesHint: {x: 115.4, y: -196.26, z: 167.6}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -3000.9016, y: 20.384129}
+  m_AnchoredPosition: {x: 8.2, y: -82.81}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219452374
@@ -18169,17 +18288,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373538701}
-  m_LocalRotation: {x: 0.72748405, y: -0.04534146, z: 0.010137573, w: 0.6845498}
-  m_LocalPosition: {x: 0, y: 0, z: 139.7}
+  m_LocalRotation: {x: 0.6855151, y: 0.027328309, z: 0.021410434, w: 0.7272303}
+  m_LocalPosition: {x: 0, y: 0, z: 176.1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 275807619}
   m_Father: {fileID: 1155467508}
-  m_LocalEulerAnglesHint: {x: 94.5, y: 37.1, z: 41.6}
+  m_LocalEulerAnglesHint: {x: 84.8, y: 49.68, z: 49.2}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1409.1111, y: -105.25819}
+  m_AnchoredPosition: {x: -10.1, y: -177.09}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373538703
@@ -18469,6 +18588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Mercury
+  fadeScreen: {fileID: 0}
 --- !u!135 &1435790250
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20184,7 +20304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1576409073
 Transform:
   m_ObjectHideFlags: 0
@@ -22564,6 +22684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Saturn
+  fadeScreen: {fileID: 0}
 --- !u!1 &1940608218
 GameObject:
   m_ObjectHideFlags: 0
