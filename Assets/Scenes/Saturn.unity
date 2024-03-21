@@ -8867,6 +8867,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552329391}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &557012141
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116095754}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: -0.0019534528, y: 0.00000032782552, z: 0.0009765625}
 --- !u!1 &559017754
 GameObject:
   m_ObjectHideFlags: 0
@@ -17543,6 +17564,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1116095759}
+    - targetCorrespondingSourceObject: {fileID: 6767036657355647039, guid: 7b7a40e0d0201d14188c936f245ec0a4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 557012141}
     - targetCorrespondingSourceObject: {fileID: 8111455430085014225, guid: 7b7a40e0d0201d14188c936f245ec0a4,
         type: 3}
       insertIndex: -1
@@ -17632,6 +17657,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Neptune
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 10, y: 10, z: 10}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!114 &1116095756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17646,6 +17673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Mercury
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!114 &1116095757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17660,6 +17689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Mars
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!114 &1116095758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17674,6 +17705,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Jupiter
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!114 &1116095759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17688,6 +17721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Earth
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 10, y: 10, z: 10}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!1 &1116924751
 GameObject:
   m_ObjectHideFlags: 0
@@ -26517,6 +26552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Venus
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!1 &1650477836
 GameObject:
   m_ObjectHideFlags: 0
@@ -26641,6 +26678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Uranus
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!114 &1682553826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26655,6 +26694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Saturn
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!114 &1682553827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26669,6 +26710,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Psyche
   fadeScreen: {fileID: 1368519113}
+  hoverScaleIncrease: {x: 0.1, y: 0.1, z: 0.1}
+  rotationSpeed: {x: 0, y: 30, z: 0}
 --- !u!1 &1723359463
 GameObject:
   m_ObjectHideFlags: 0

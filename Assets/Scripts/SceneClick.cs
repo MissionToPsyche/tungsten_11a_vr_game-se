@@ -10,10 +10,21 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     public FadeScreen fadeScreen;
     private int scenesVisited = 0;
 
+    //private Renderer planetRenderer;
+    public Vector3 hoverScaleIncrease = new Vector3(0.1f, 0.1f, 0.1f); // How much to scale up on hover
+    private Vector3 originalScale;
+    private bool isHovered = false;
+    public Vector3 rotationSpeed = new Vector3(0, 30, 0);
+
     private void Awake()
     {
         scenesVisited++;
-        //Empty
+
+        //planetRenderer = GetComponent<Renderer>(); 
+
+        originalScale = transform.localScale;
+
+
     }
 
     public void Update()
@@ -23,6 +34,10 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
             scenesVisited = 0;
             MainMenuController.resetStartTime();
             SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
+        }
+        if (isHovered) 
+        {
+            transform.Rotate(rotationSpeed * Time.deltaTime);
         }
     }
 
@@ -53,13 +68,17 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //Empty
+        isHovered = true; // Start rotating
+        transform.localScale = originalScale + hoverScaleIncrease; // Also scale up for hover effect
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //Empty
-    } 
+        isHovered = false; // Stop rotating
+        transform.localScale = originalScale; // Revert to original scale
+    }
+
+
 
     IEnumerator GoToSceneRoutine()
     {
