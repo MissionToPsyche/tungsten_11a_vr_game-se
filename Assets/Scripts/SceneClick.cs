@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public string scene;
+    public FadeScreen fadeScreen;
     private int scenesVisited = 0;
 
     private void Awake()
@@ -14,14 +16,27 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         //Empty
     }
 
+    public void Update()
+    {
+        if (MainMenuController.isEventMode() && MainMenuController.checkExceededTimeLimit())
+        {
+            scenesVisited = 0;
+            MainMenuController.resetStartTime();
+            SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
+        }
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (MainMenuController.isEventMode() && scenesVisited >= MainMenuController.getMaxScenes())
+        StartCoroutine(GoToSceneRoutine());
+        if (MainMenuController.isEventMode() && scenesVisited >= MainMenuController.getMaxScenes() && !MainMenuController.checkExceededTimeLimit())
         {
-            Debug.Log("Max scenes reached");
-            SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu and reset scenesVisited to 0
+            scenesVisited = 0;
+            MainMenuController.resetStartTime();
+            SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
         } else
         {
+            // No need to increment scenesVisited here, the Awake() method will increment it when the next scene loads
             SceneManager.LoadScene(scene);
         }
     }
@@ -45,5 +60,11 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     {
         //Empty
     } 
+
+    IEnumerator GoToSceneRoutine()
+    {
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+    }
 
 }

@@ -3040,7 +3040,11 @@ PrefabInstance:
     - {fileID: 1215831472866150, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
     - {fileID: 1097216225574134, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1526814149960808, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1407742250}
   m_SourcePrefab: {fileID: 100100000, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
 --- !u!1 &413609178
 GameObject:
@@ -4803,8 +4807,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1de557358bc4884d99596081421269d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ssMapObject: {fileID: 1571998256}
+  solarSystemMapObject: {fileID: 0}
+  VrSolarSystemMapObject: {fileID: 0}
+  VrSetup: {fileID: 0}
   sceneEndCanvas: {fileID: 0}
+  VrSceneEndCanvas: {fileID: 0}
   systemErrorSound: {fileID: 0}
 --- !u!4 &670374062
 Transform:
@@ -5670,8 +5677,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1de557358bc4884d99596081421269d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ssMapObject: {fileID: 0}
+  solarSystemMapObject: {fileID: 0}
+  VrSolarSystemMapObject: {fileID: 0}
+  VrSetup: {fileID: 0}
   sceneEndCanvas: {fileID: 0}
+  VrSceneEndCanvas: {fileID: 0}
   systemErrorSound: {fileID: 0}
 --- !u!114 &798791739
 MonoBehaviour:
@@ -10171,6 +10181,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401126793}
   m_CullTransparentMesh: 1
+--- !u!1 &1407742249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1526814149960808, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 413597607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407742250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407742249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c20de9ecc8bde41b5ed3a66a8071a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spin: 1
+  spinParent: 0
+  speed: 2.5
+  clockwise: 1
+  direction: 1
+  directionChangeSpeed: 2
 --- !u!1 &1425500116
 GameObject:
   m_ObjectHideFlags: 0
@@ -11075,12 +11109,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b7a40e0d0201d14188c936f245ec0a4, type: 3}
---- !u!1 &1571998256 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7636319957433035971, guid: 7b7a40e0d0201d14188c936f245ec0a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1571998255}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1571998257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7111878867462518393, guid: 7b7a40e0d0201d14188c936f245ec0a4,
