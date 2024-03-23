@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Controller;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -18,10 +19,10 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void Update()
     {
-        if (MainMenuController.isEventMode() && MainMenuController.checkExceededTimeLimit())
+        if (MenuController.isEventMode() && MenuController.checkExceededTimeLimit())
         {
             scenesVisited = 0;
-            MainMenuController.resetStartTime();
+            MenuController.resetStartTime();
             SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
         }
     }
@@ -29,10 +30,10 @@ public class SceneClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     public void OnPointerDown(PointerEventData eventData)
     {
         StartCoroutine(GoToSceneRoutine());
-        if (MainMenuController.isEventMode() && scenesVisited >= MainMenuController.getMaxScenes() && !MainMenuController.checkExceededTimeLimit())
+        if (MenuController.isEventMode() && scenesVisited >= MenuController.getMaxScenes() && !MenuController.checkExceededTimeLimit())
         {
             scenesVisited = 0;
-            MainMenuController.resetStartTime();
+            MenuController.resetStartTime();
             SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
         } else
         {

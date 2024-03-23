@@ -5,179 +5,193 @@ using TMPro;
 using System;
 using UnityEditor;
 using System.Collections;
+using UI.Menus;
 
-public class MainMenuController : MonoBehaviour
-{
-    public GameObject mainMenu;
-    public GameObject eventModePopup;
-    public Button freePlayButton;
-    public Button eventGameButton;
-    public Button settingsButton;
-    public Button quitButton;
-    public GameObject creditsMenu;
-    public Button creditsButton;
-    public Button creditsBackButton;
-    public GameObject disclaimerMenu;
-    public Button disclaimerButton;
-    public Button disclaimerBackButton;
-    public Button eventGoButton;
-    public Button eventModeBackButton;
-    public GameObject eventModeSceneLimitInput;
-    public GameObject eventModeTimeLimitInput;
-    public FadeScreen fadeScreen;
+namespace Controller {
+	public class MenuController : MonoBehaviour {
+		public GameObject eventModePopup;
+		public Button freePlayButton;
+		public Button eventGameButton;
+		public Button settingsButton;
+		public Button quitButton;
+		public GameObject creditsMenu;
+		public Button creditsButton;
+		public Button creditsBackButton;
+		public GameObject disclaimerMenu;
+		public Button disclaimerButton;
+		public Button disclaimerBackButton;
+		public Button eventGoButton;
+		public Button eventModeBackButton;
+		public GameObject eventModeSceneLimitInput;
+		public GameObject eventModeTimeLimitInput;
+		public FadeScreen fadeScreen;
 
-    protected static Boolean eventMode = false;    // Keep track of if we are in event mode
-    protected static int maxScenes = 15;           // Max number of scenes a player can visit (to be used in event mode only)
-    protected static double timeLimit = 20;        // Time limit per turn while in event mode
-    protected static DateTime startTime;                            // Time in which the game starts
-    private void Start()
-    {
-        freePlayButton.onClick.AddListener(FreePlayStart);
-        eventGameButton.onClick.AddListener(EventModePopup);
-        settingsButton.onClick.AddListener(SettingsScene);
-        quitButton.onClick.AddListener(QuitGame);
-        creditsButton.onClick.AddListener(CreditsMenu);
-        creditsBackButton.onClick.AddListener(CreditsBackButton);
-        disclaimerButton.onClick.AddListener(DisclaimerMenu);
-        disclaimerBackButton.onClick.AddListener(DisclaimerBackButton);
-        eventGoButton.onClick.AddListener(EventModeGo);
-        eventModeBackButton.onClick.AddListener(EventModeBack);
+		static Boolean _eventMode; // Keep track of if we are in event mode
+		static int _maxScenes = 15; // Max number of scenes a player can visit (to be used in event mode only)
+		static double _timeLimit = 20; // Time limit per turn while in event mode
+		static DateTime _startTime; // Time in which the game starts
 
-        // On start, ensure the menus are set to the correct visibility
-        mainMenu.SetActive(true);
-        eventModePopup.SetActive(false);
-        creditsMenu.SetActive(false);
-        disclaimerMenu.SetActive(false);
+		GUIMenu activeMenu;
+		MainMenu mainMenu;
+		EventMenu eventMenu;
+		NextPlayerMenu nextPlayerMenu;
+		SettingsMenu settingsMenu;
+		ControlsMenu controlsMenu;
 
-    }
+		void Start() {
+			freePlayButton.onClick.AddListener(FreePlayStart);
+			eventGameButton.onClick.AddListener(EventModePopup);
+			settingsButton.onClick.AddListener(SettingsScene);
+			quitButton.onClick.AddListener(QuitGame);
+			creditsButton.onClick.AddListener(CreditsMenu);
+			creditsBackButton.onClick.AddListener(CreditsBackButton);
+			disclaimerButton.onClick.AddListener(DisclaimerMenu);
+			disclaimerBackButton.onClick.AddListener(DisclaimerBackButton);
+			eventGoButton.onClick.AddListener(EventModeGo);
+			eventModeBackButton.onClick.AddListener(EventModeBack);
 
-    private void Awake()
-    {
-        // If a player navigates back to the main menu while it is in event mode, we should disable free play to prevent users from getting around the event mode rules
-        // The only way event mode can be turned off is if quit (in the future we should add an 'event mode off' button
-        if (isEventMode())
-        {
-            freePlayButton.enabled = false;
-        }
-        else
-        {
-            freePlayButton.enabled = true;
-        }
-    }
+			// On start, ensure the menus are set to the correct visibility
+			mainMenu = FindObjectOfType<MainMenu>();
+			mainMenu.SetActive(true);
+			eventMenu = FindObjectOfType<EventMenu>();
+			nextPlayerMenu = FindObjectOfType<NextPlayerMenu>();
+			settingsMenu = FindObjectOfType<SettingsMenu>();
+			controlsMenu = FindObjectOfType<ControlsMenu>();
+		}
 
-    IEnumerator GoToSceneRoutine()
-    {
-        fadeScreen.FadeOut();
-        SceneManager.LoadScene("Earth");
-        yield return new WaitForSeconds(fadeScreen.fadeDuration);
-    }
+		void Awake() {
+			// If a player navigates back to the main menu while it is in event mode, we should disable free play to prevent users from getting around the event mode rules
+			// The only way event mode can be turned off is if quit (in the future we should add an 'event mode off' button
+			if (isEventMode()) {
+				freePlayButton.enabled = false;
+			}
+			else {
+				freePlayButton.enabled = true;
+			}
+		}
 
-    public void FreePlayStart()
-    {
-        startTime = DateTime.Now;
-        StartCoroutine(GoToSceneRoutine());
-    }
+		IEnumerator GoToSceneRoutine() {
+			fadeScreen.FadeOut();
+			SceneManager.LoadScene("Earth");
+			yield return new WaitForSeconds(fadeScreen.fadeDuration);
+		}
 
-    public void EventModePopup() 
-    {
-        mainMenu.SetActive(false);
-        eventModePopup.SetActive(true);
-    }
+		public void FreePlayStart() {
+			_startTime = DateTime.Now;
+			StartCoroutine(GoToSceneRoutine());
+		}
 
-    public void EventModeGo()
-    {
-        string sceneLimitInputText = eventModeSceneLimitInput.GetComponent<TMP_InputField>().text;
-        string timeLimitInputText = eventModeTimeLimitInput.GetComponent<TMP_InputField>().text;
-        bool parseSceneLimit = Int32.TryParse(sceneLimitInputText, out int sceneLimitInputNum);
-        bool parseTimeLimit = Double.TryParse(timeLimitInputText, out double timeLimitInputNum);
-        if (sceneLimitInputNum <= 0 || sceneLimitInputNum > 9 || !parseSceneLimit)
-        {
-            EditorUtility.DisplayDialog("Warning",
-                "Please enter a number 1 through 9 for the scene limit.", "OK");
-        } else if (timeLimitInputNum <= 0 || timeLimitInputNum > 60 || !parseTimeLimit)
-        {
-            EditorUtility.DisplayDialog("Warning",
-                "Please enter a time limit in minutes between 1 and 60", "OK");
-        }
-        else
-        {
-            maxScenes = sceneLimitInputNum;
-            eventMode = true;
-            timeLimit = timeLimitInputNum;
-            startTime = DateTime.Now;
-            Debug.Log("Max Scenes: " + maxScenes);
-            Debug.Log("Time Limit: " + timeLimit);
-            StartCoroutine(GoToSceneRoutine());
-        }
-    }
+		public void EventModePopup() {
+			mainMenu.SetActive(false);
+			eventModePopup.SetActive(true);
+		}
 
-    public void EventModeBack()
-    {
-        eventModePopup.SetActive(false);
-        mainMenu.SetActive(true);
-    }
+		public void EventModeGo() {
+			string sceneLimitInputText = eventModeSceneLimitInput.GetComponent<TMP_InputField>().text;
+			string timeLimitInputText = eventModeTimeLimitInput.GetComponent<TMP_InputField>().text;
+			bool parseSceneLimit = Int32.TryParse(sceneLimitInputText, out int sceneLimitInputNum);
+			bool parseTimeLimit = Double.TryParse(timeLimitInputText, out double timeLimitInputNum);
+			if (sceneLimitInputNum <= 0 || sceneLimitInputNum > 9 || !parseSceneLimit) {
+				EditorUtility.DisplayDialog("Warning",
+					"Please enter a number 1 through 9 for the scene limit.",
+					"OK");
+			}
+			else if (timeLimitInputNum <= 0 || timeLimitInputNum > 60 || !parseTimeLimit) {
+				EditorUtility.DisplayDialog("Warning",
+					"Please enter a time limit in minutes between 1 and 60",
+					"OK");
+			}
+			else {
+				_maxScenes = sceneLimitInputNum;
+				_eventMode = true;
+				_timeLimit = timeLimitInputNum;
+				_startTime = DateTime.Now;
+				Debug.Log("Max Scenes: " + _maxScenes);
+				Debug.Log("Time Limit: " + _timeLimit);
+				StartCoroutine(GoToSceneRoutine());
+			}
+		}
 
-    public static void resetStartTime()
-    {
-        startTime = DateTime.Now;
-    }
+		public void EventModeBack() {
+			eventModePopup.SetActive(false);
+			mainMenu.SetActive(true);
+		}
 
-    public static bool checkExceededTimeLimit()
-    {
-        DateTime now = DateTime.Now;
-        TimeSpan timePassed = now - startTime;
-        double minutesPassed = timePassed.TotalMinutes;
-        if (minutesPassed > timeLimit)
-        {
-            return true;
-        } else
-        {
-            return false;
-        }
-    }
+		public static void resetStartTime() {
+			_startTime = DateTime.Now;
+		}
 
-    public static int getMaxScenes()
-    {
-        return maxScenes;
-    }
+		public static bool checkExceededTimeLimit() {
+			DateTime now = DateTime.Now;
+			TimeSpan timePassed = now - _startTime;
+			double minutesPassed = timePassed.TotalMinutes;
+			if (minutesPassed > _timeLimit) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
 
-    public static Boolean isEventMode()
-    {
-        return eventMode;
-    }
+		public static int getMaxScenes() {
+			return _maxScenes;
+		}
 
-    public void SettingsScene()
-    {
-        Debug.Log("Settings page");
-    }
+		public static Boolean isEventMode() {
+			return _eventMode;
+		}
 
-    public void QuitGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
-    }
+		public void SettingsScene() {
+			Debug.Log("Settings page");
+		}
 
-    public void CreditsMenu()
-    {
-        mainMenu.SetActive(false);
-        creditsMenu.SetActive(true);
-    }
+		public void QuitGame() {
+			EditorApplication.isPlaying = false;
+			Application.Quit();
+		}
 
-    public void CreditsBackButton()
-    {
-        creditsMenu.SetActive(false);
-        mainMenu.SetActive(true);
-    }
+		public void CreditsMenu() {
+			mainMenu.SetActive(false);
+			creditsMenu.SetActive(true);
+		}
 
-    public void DisclaimerMenu()
-    {
-        creditsMenu.SetActive(false);
-        disclaimerMenu.SetActive(true);
-    }
+		public void CreditsBackButton() {
+			creditsMenu.SetActive(false);
+			mainMenu.SetActive(true);
+		}
 
-    public void DisclaimerBackButton()
-    {
-        disclaimerMenu.SetActive(false);
-        creditsMenu.SetActive(true);
-    }
+		public void DisclaimerMenu() {
+			creditsMenu.SetActive(false);
+			disclaimerMenu.SetActive(true);
+		}
+
+		public void DisclaimerBackButton() {
+			disclaimerMenu.SetActive(false);
+			creditsMenu.SetActive(true);
+		}
+		public void SetActiveMenu(GUIMenu guiMenu) {
+			if(activeMenu != null) activeMenu.SetActive(false);
+			activeMenu = guiMenu;
+		}
+
+		public MainMenu GetMainMenu() {
+			return mainMenu;
+		}
+
+		public EventMenu GetEventMenu() {
+			return eventMenu;
+		}
+		
+		public NextPlayerMenu GetNextPlayerMenu() {
+			return nextPlayerMenu;
+		}
+		
+		public SettingsMenu GetSettingsMenu() {
+			return settingsMenu;
+		}
+
+		public ControlsMenu GetControlsMenu() {
+			return controlsMenu;
+		}
+	}
 }

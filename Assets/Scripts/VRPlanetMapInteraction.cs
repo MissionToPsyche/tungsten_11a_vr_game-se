@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEditor.SearchService;
 using System.Collections.Generic;
 using System.Collections;
+using Controller;
 
 public class VRPlanetMapInteractions : MonoBehaviour
 {
@@ -17,10 +18,10 @@ public class VRPlanetMapInteractions : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneToLoad)){
             StartCoroutine(GoToSceneRoutine());
-            if (MainMenuController.isEventMode() && scenesVisited >= MainMenuController.getMaxScenes() && !MainMenuController.checkExceededTimeLimit())
+            if (MenuController.isEventMode() && scenesVisited >= MenuController.getMaxScenes() && !MenuController.checkExceededTimeLimit())
             {
                 scenesVisited = 0;
-                MainMenuController.resetStartTime();
+                MenuController.resetStartTime();
                 SceneManager.LoadScene("MainMenu"); // TODO in the future, this will redirect to the next player menu
             }
             else

@@ -6,15 +6,15 @@ namespace UI.Menus {
 	 * Base class for all GUI menus.
 	 */
 	public abstract class GUIMenu : GUIElement {
+
+		Camera _camera;
+		bool _needsUpdate;
 		
-		private Camera _camera;
-		private bool _needsUpdate;
-		
-		private void Start() {
+		void Start() {
 		    _camera = Camera.main;
 		 }
 
-		private void Update() {
+		void Update() {
 			if(IsActive()) {
 				if(_needsUpdate) {
 					UpdateMenu();

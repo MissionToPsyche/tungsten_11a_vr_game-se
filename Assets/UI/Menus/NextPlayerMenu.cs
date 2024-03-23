@@ -1,4 +1,3 @@
-using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Menus {
@@ -11,7 +10,6 @@ namespace UI.Menus {
 		}
 
 		protected override void UpdateMenu() {
-			
 		}
 	}
 }
