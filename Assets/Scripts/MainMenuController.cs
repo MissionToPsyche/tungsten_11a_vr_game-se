@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEditor;
-
+using System.Collections;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -24,6 +24,7 @@ public class MainMenuController : MonoBehaviour
     public Button eventModeBackButton;
     public GameObject eventModeSceneLimitInput;
     public GameObject eventModeTimeLimitInput;
+    public FadeScreen fadeScreen;
 
     protected static Boolean eventMode = false;    // Keep track of if we are in event mode
     protected static int maxScenes = 15;           // Max number of scenes a player can visit (to be used in event mode only)
@@ -64,10 +65,17 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    IEnumerator GoToSceneRoutine()
+    {
+        fadeScreen.FadeOut();
+        SceneManager.LoadScene("Earth");
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+    }
+
     public void FreePlayStart()
     {
         startTime = DateTime.Now;
-        SceneManager.LoadScene("Earth");
+        StartCoroutine(GoToSceneRoutine());
     }
 
     public void EventModePopup() 
@@ -99,7 +107,7 @@ public class MainMenuController : MonoBehaviour
             startTime = DateTime.Now;
             Debug.Log("Max Scenes: " + maxScenes);
             Debug.Log("Time Limit: " + timeLimit);
-            SceneManager.LoadScene("Earth");
+            StartCoroutine(GoToSceneRoutine());
         }
     }
 
