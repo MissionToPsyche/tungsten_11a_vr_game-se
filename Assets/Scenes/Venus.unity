@@ -638,6 +638,7 @@ Transform:
   - {fileID: 1051329700}
   - {fileID: 509720377}
   - {fileID: 30950929}
+  - {fileID: 600401603}
   m_Father: {fileID: 795224980}
   m_LocalEulerAnglesHint: {x: 29.91, y: -59.8, z: -1.143}
 --- !u!20 &32128445
@@ -2261,6 +2262,118 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &183370310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183370311}
+  - component: {fileID: 183370315}
+  - component: {fileID: 183370314}
+  - component: {fileID: 183370313}
+  - component: {fileID: 183370312}
+  m_Layer: 0
+  m_Name: FaderScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183370311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183370310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 849357327}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &183370312
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183370310}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &183370313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183370310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba65e143d17761643bcf5fea6d25286c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOnStart: 1
+  fadeDuration: 2
+  fadeColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!23 &183370314
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183370310}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c2e9067a8eaba744d9aa700308c45a71, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &183370315
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183370310}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &203671402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Venus
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &322734394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10000,6 +10114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Uranus
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &480257967
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10312,6 +10427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Neptune
+  fadeScreen: {fileID: 600401605}
 --- !u!114 &509720389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10325,6 +10441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Mars
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &509720390
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10359,6 +10476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Earth
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &509720392
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11185,6 +11303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Psyche
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &580275076
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11929,6 +12048,118 @@ MonoBehaviour:
   m_EnableARRaycasting: 0
   m_OccludeARHitsWith3DObjects: 0
   m_OccludeARHitsWith2DObjects: 0
+--- !u!1 &600401602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600401603}
+  - component: {fileID: 600401607}
+  - component: {fileID: 600401606}
+  - component: {fileID: 600401605}
+  - component: {fileID: 600401604}
+  m_Layer: 0
+  m_Name: FaderScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600401603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600401602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0.084}
+  m_LocalScale: {x: 1.1679, y: 1.1679, z: 1.1679}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32128444}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &600401604
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600401602}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &600401605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600401602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba65e143d17761643bcf5fea6d25286c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOnStart: 1
+  fadeDuration: 2
+  fadeColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!23 &600401606
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600401602}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c2e9067a8eaba744d9aa700308c45a71, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &600401607
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600401602}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &611981008
 GameObject:
   m_ObjectHideFlags: 0
@@ -13684,7 +13915,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 183370311}
   m_Father: {fileID: 1949783719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &851270130
@@ -16525,6 +16757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Jupiter
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &1209318371
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18469,6 +18702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Mercury
+  fadeScreen: {fileID: 600401605}
 --- !u!135 &1435790250
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21513,6 +21747,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1047629910}
     m_Modifications:
+    - target: {fileID: 3223532111238665195, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
+    - target: {fileID: 3634434904887166576, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
+    - target: {fileID: 3676401823731276098, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
     - target: {fileID: 4922328238014928889, guid: ea480c2e059130e41bc89f3813a65a45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21563,11 +21812,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.696
       objectReference: {fileID: 0}
+    - target: {fileID: 5523500141983741042, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
+    - target: {fileID: 5595099159864524995, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
     - target: {fileID: 5693763650053033283, guid: ea480c2e059130e41bc89f3813a65a45,
         type: 3}
       propertyPath: m_Name
       value: SolarSystemModel  With VR Clicking
       objectReference: {fileID: 0}
+    - target: {fileID: 6524954156808674686, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
+    - target: {fileID: 6786899361807747847, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
+    - target: {fileID: 7085763629573428466, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
+    - target: {fileID: 7215196502576109476, guid: ea480c2e059130e41bc89f3813a65a45,
+        type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 183370313}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -22564,6 +22843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Saturn
+  fadeScreen: {fileID: 600401605}
 --- !u!1 &1940608218
 GameObject:
   m_ObjectHideFlags: 0
