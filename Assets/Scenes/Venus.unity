@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000043681564, g: 0.000095573596, b: 0.000043681564,
+  m_IndirectSpecularColor: {r: 0.00004327564, g: 0.000095573596, b: 0.00004327564,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -2804,7 +2804,7 @@ PrefabInstance:
     - target: {fileID: 3655432148944881716, guid: 8493d264ef21e77478d4576a45aa6fc3,
         type: 3}
       propertyPath: m_Constraints
-      value: 8
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 3655432148944881716, guid: 8493d264ef21e77478d4576a45aa6fc3,
         type: 3}
@@ -14140,9 +14140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1684860921}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 0
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -20468,7 +20468,7 @@ MonoBehaviour:
   - {fileID: 1317717022}
   index: 0
   timer: 0
-  spaceship: {fileID: 1047629910}
+  spaceship: {fileID: 1576409073}
 --- !u!1 &1589639699
 GameObject:
   m_ObjectHideFlags: 0
@@ -22491,6 +22491,7 @@ GameObject:
   - component: {fileID: 1885798461}
   - component: {fileID: 1885798460}
   - component: {fileID: 1885798459}
+  - component: {fileID: 1885798462}
   - component: {fileID: 1885798458}
   - component: {fileID: 1885798457}
   - component: {fileID: 1885798456}
@@ -22638,7 +22639,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &1885798459
 MonoBehaviour:
@@ -22689,6 +22690,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 50.738, z: 0}
+--- !u!114 &1885798462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885798455}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21837bc2982e73549bfa6abb2238fc23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReadablePopupScreen: {fileID: 394830553}
 --- !u!1 &1893186232
 GameObject:
   m_ObjectHideFlags: 0
